@@ -15,7 +15,7 @@
 <div class="layout">
 <aside class="sidebar">
   <div class="course-title">MODULE 1<br><span>Python Programming Fundamentals</span></div>
-  <nav id="nav">
+  <nav>
     <a href="#home">🏠 Home</a>
     <a href="#way">01 · The Way of the Program</a>
     <a href="#variables">02 · Variables & Expressions</a>
@@ -33,7 +33,7 @@
 <section id="home" class="hero">
   <div class="eyebrow">MODULE 1 · 8 HOURS</div>
   <h1>Python Programming<br><span>Fundamentals</span></h1>
-  <p class="lead">Learn → Code → Predict → Run → Observe → Debug → Understand</p>
+  <p class="lead">From your first instruction to reusable functions — learn by thinking, coding, observing and debugging.</p>
   <div class="hero-actions">
     <a class="btn primary" href="#way">Start Learning →</a>
     <a class="btn" href="#quiz">Take Quiz</a>
@@ -41,153 +41,271 @@
   <div class="author">Prepared & Maintained by <b>Prof. Kiran Mudaraddi</b><br>Assistant Professor, Department of CSE · BITM, Ballari</div>
 </section>
 
+<section class="learning-map">
+  <h2>How to learn this module</h2>
+  <div class="map"><span>Connect</span><i>→</i><span>Understand</span><i>→</i><span>Predict</span><i>→</i><span>Run</span><i>→</i><span>Observe</span><i>→</i><span>Debug</span><i>→</i><span>Apply</span></div>
+  <p>Do not just read the code. Before running a program, make a prediction. After running it, explain why the result happened.</p>
+</section>
+
 <section class="cards">
- <article class="card"><b>01</b><h3>The Way of the Program</h3><p>Programs, Python and debugging.</p></article>
- <article class="card"><b>02</b><h3>Variables & Expressions</h3><p>Data, variables, operators and evaluation.</p></article>
- <article class="card"><b>03</b><h3>Strings & Input</h3><p>Text, user input and composition.</p></article>
- <article class="card"><b>04</b><h3>Iteration</h3><p>Loops, tables, data and repetition.</p></article>
- <article class="card"><b>05</b><h3>Functions</h3><p>Arguments, return values and reuse.</p></article>
+ <article class="card"><b>01</b><h3>The Way of the Program</h3><p>Understand programs, Python and the debugging mindset.</p></article>
+ <article class="card"><b>02</b><h3>Variables & Expressions</h3><p>Represent data and build expressions.</p></article>
+ <article class="card"><b>03</b><h3>Strings & Input</h3><p>Work with text and interact with users.</p></article>
+ <article class="card"><b>04</b><h3>Iteration</h3><p>Repeat instructions and process data.</p></article>
+ <article class="card"><b>05</b><h3>Functions</h3><p>Build reusable problem-solving blocks.</p></article>
 </section>
 
 <section id="way" class="lesson">
 <div class="tag">01 · THE WAY OF THE PROGRAM</div>
-<h2>Start with the question: What does a computer actually do?</h2>
-<p>A program is a sequence of instructions written to solve a problem. Python lets us express those instructions in a readable way.</p>
-<div class="callout"><b>Think:</b> If you give a computer a recipe, what must the recipe contain so that the computer can follow it?</div>
+<h2>Think like a programmer</h2>
+<p>Programming starts with a simple idea: <b>give the computer precise instructions to solve a problem.</b> A computer does not normally “understand” our intention. It follows the instructions we provide.</p>
+
+<div class="connect"><b>Connect to everyday life:</b> Imagine giving a friend instructions to make tea. “Make tea” is not enough. You would need steps such as boil water, add tea, add milk, add sugar and serve. A program works in a similar way: a problem is converted into precise steps.</div>
+
 <h3>The Python programming language</h3>
-<p>Python is a high-level, general-purpose programming language. A Python program is executed by the Python interpreter, which reads and executes Python instructions.</p>
+<p><b>Python</b> is a high-level, general-purpose programming language known for readable syntax. It can be used for automation, web applications, data analysis, artificial intelligence, scientific computing and education.</p>
+<p>When we write Python code, the <b>Python interpreter</b> reads the instructions and executes them.</p>
 <pre><code>print("Hello, Python!")</code></pre>
-<div class="observe"><b>Observe:</b> The instruction asks Python to display text. The text inside quotes is a string.</div>
+<div class="observe"><b>Observe:</b> <code>print()</code> is a built-in function. The text inside quotation marks is a string value. Python executes the statement and displays the text.</div>
+
 <h3>What is a program?</h3>
-<p>A program is a collection of instructions that tells a computer how to perform a task or solve a problem.</p>
-<h3>What is debugging?</h3>
-<p><b>Debugging</b> is the systematic process of finding, understanding and correcting errors in a program.</p>
-<div class="grid3">
- <div><b>Syntax Error</b><p>The code breaks Python's grammar rules.</p></div>
- <div><b>Runtime Error</b><p>The program starts but encounters a problem while running.</p></div>
- <div><b>Semantic Error</b><p>The program runs, but produces the wrong result.</p></div>
+<p>A <b>program</b> is a sequence of instructions written to perform a task or solve a problem.</p>
+<div class="concept-grid">
+<div><b>Input</b><p>Data supplied to a program.</p><code>age = 20</code></div>
+<div><b>Processing</b><p>Operations performed on the data.</p><code>age + 1</code></div>
+<div><b>Output</b><p>Information produced by the program.</p><code>print(age)</code></div>
 </div>
+
+<h3>What is debugging?</h3>
+<p>Even experienced programmers write programs containing errors. <b>Debugging</b> is the systematic process of locating, understanding and correcting those errors.</p>
+<div class="flow"><span>Observe the problem</span><i>→</i><span>Find evidence</span><i>→</i><span>Form a hypothesis</span><i>→</i><span>Change</span><i>→</i><span>Run again</span><i>→</i><span>Verify</span></div>
+
+<h3>Three important types of errors</h3>
+<div class="error-grid">
+<div><h4>❌ Syntax Error</h4><p>The program violates Python's grammar rules, so Python cannot understand the instruction.</p><pre><code>print("Hello"</code></pre><p><b>Fix:</b> complete the parentheses.</p></div>
+<div><h4>💥 Runtime Error</h4><p>The program starts running but encounters a problem during execution.</p><pre><code>number = 10
+print(number / 0)</code></pre><p><b>Fix:</b> prevent division by zero.</p></div>
+<div><h4>🤔 Semantic Error</h4><p>The program runs but does not produce the intended result. The instructions are syntactically valid but logically wrong.</p><pre><code>length = 10
+width = 5
+area = length + width</code></pre><p><b>Fix:</b> use the correct formula for area.</p></div>
+</div>
+
 <h3>Experimental debugging</h3>
-<p>Use evidence rather than guessing.</p>
-<div class="flow"><span>Observe</span><i>→</i><span>Hypothesize</span><i>→</i><span>Change</span><i>→</i><span>Run</span><i>→</i><span>Check</span></div>
-<pre><code># Semantic error
-a = 10
-b = 5
-print(a - b)   # Is subtraction really what the problem asks?</code></pre>
-<div class="challenge"><b>Try it:</b> Deliberately introduce one syntax error into a small program. Run it. Read the error message before fixing it.</div>
+<p>Experimental debugging means treating debugging like an investigation. Instead of changing many lines at once, change one small part, run the program, and use the result as evidence.</p>
+<div class="debug-steps">
+<div><b>1. Observe</b><span>What is wrong?</span></div><div><b>2. Identify</b><span>Where might it happen?</span></div><div><b>3. Hypothesize</b><span>What could be causing it?</span></div><div><b>4. Change</b><span>Make one small change.</span></div><div><b>5. Run</b><span>Test again.</span></div><div><b>6. Explain</b><span>Did the evidence support the idea?</span></div>
+</div>
+<div class="try"><b>Try:</b> Write a program with one intentional error. Before fixing it, read the error message and describe what Python is telling you.</div>
+<div class="takeaway"><b>Takeaway:</b> A good programmer does not merely fix errors. A good programmer learns from the evidence produced by the program.</div>
 </section>
 
 <section id="variables" class="lesson">
 <div class="tag">02 · VARIABLES, EXPRESSIONS & STATEMENTS</div>
-<h2>Make the program remember things</h2>
-<p>Variables give names to values. Expressions combine values and operators to produce new values.</p>
+<h2>Give names to information</h2>
+<p>Programs work with information. Python represents that information as <b>values</b>. Variables give useful names to values so that we can use them later.</p>
+
 <h3>Values and data types</h3>
-<table><tr><th>Type</th><th>Example</th><th>Meaning</th></tr>
-<tr><td>int</td><td>25</td><td>Whole number</td></tr><tr><td>float</td><td>3.14</td><td>Decimal number</td></tr><tr><td>str</td><td>"Python"</td><td>Text</td></tr><tr><td>bool</td><td>True</td><td>Logical value</td></tr></table>
-<pre><code>name = "Sam"
+<table><tr><th>Type</th><th>Example</th><th>Used for</th></tr>
+<tr><td><code>int</code></td><td><code>25</code></td><td>Whole numbers</td></tr>
+<tr><td><code>float</code></td><td><code>3.14</code></td><td>Decimal numbers</td></tr>
+<tr><td><code>str</code></td><td><code>"Python"</code></td><td>Text</td></tr>
+<tr><td><code>bool</code></td><td><code>True</code></td><td>True/false decisions</td></tr>
+</table>
+<pre><code>name = "Asha"
 age = 20
 cgpa = 8.4
-print(name, age, cgpa)</code></pre>
+passed = True
+
+print(name)
+print(age)
+print(cgpa)
+print(passed)</code></pre>
+
+<h3>Variables</h3>
+<p>A variable is a name that refers to a value. The statement below assigns the value <code>25</code> to the variable <code>age</code>.</p>
+<pre><code>age = 25</code></pre>
+<p>Think of <code>age</code> as a label attached to a value. The assignment operator <code>=</code> means “store/refer to this value with this name”; it is not the same as mathematical equality.</p>
+
 <h3>Variable names and keywords</h3>
-<p>Names should be meaningful, cannot start with a digit, and cannot be Python keywords such as <code>if</code>, <code>for</code>, <code>while</code>, or <code>def</code>.</p>
+<p>Use meaningful names. Names may contain letters, digits and underscores, but they cannot begin with a digit. Python keywords have special meanings and cannot be used as ordinary variable names.</p>
+<pre><code>student_name = "Ravi"   # good
+total_marks = 85        # good
+
+# 2marks = 20           # invalid
+# class = "CSE"         # invalid: keyword</code></pre>
+
+<h3>Statements and expressions</h3>
+<p>A <b>statement</b> is an instruction that Python can execute. An <b>expression</b> is a combination of values, variables and operators that produces a value.</p>
+<pre><code>x = 10 + 5       # statement containing an expression
+result = x * 2    # statement
+print(result)     # statement</code></pre>
+
 <h3>Operators and operands</h3>
 <pre><code>a = 10
 b = 3
-print(a + b)
-print(a * b)
-print(a / b)
-print(a % b)
-print(a ** b)</code></pre>
+
+print(a + b)   # addition
+print(a - b)   # subtraction
+print(a * b)   # multiplication
+print(a / b)   # division
+print(a // b)  # floor division
+print(a % b)   # remainder
+print(a ** b)  # power</code></pre>
+<p>In <code>a + b</code>, <code>a</code> and <code>b</code> are operands and <code>+</code> is the operator.</p>
+
 <h3>Type converter functions</h3>
-<pre><code>age = int("21")
-price = float("99.5")
-number = str(25)</code></pre>
+<p>User input normally arrives as text. Conversion functions allow us to convert values to another type.</p>
+<pre><code>age = int("20")
+price = float("99.50")
+code = str(2026)
+
+print(age + 1)
+print(price + 10)
+print(code)</code></pre>
+
 <h3>Order of operations</h3>
-<p>Python evaluates expressions using operator precedence. Parentheses can make your intention explicit.</p>
-<pre><code>result = (10 + 2) * 3
-print(result)</code></pre>
-<div class="challenge"><b>Predict → Run:</b> What is the value of <code>10 + 2 * 3</code>? Now compare it with <code>(10 + 2) * 3</code>.</div>
+<p>When an expression contains several operators, Python follows precedence rules. Parentheses have the highest priority among these common arithmetic operations.</p>
+<pre><code>print(10 + 2 * 3)       # multiplication first
+print((10 + 2) * 3)     # parentheses first</code></pre>
+<div class="predict"><b>Predict:</b> Before running these two statements, write their results. Then run them and explain the difference.</div>
+
+<div class="takeaway"><b>Takeaway:</b> Variables store useful information, expressions calculate values, and statements tell Python what to do.</div>
 </section>
 
 <section id="strings" class="lesson">
-<div class="tag">03 · STRINGS & INPUT</div>
-<h2>Let the program talk to the user</h2>
+<div class="tag">03 · STRINGS, INPUT & COMPOSITION</div>
+<h2>Make programs communicate</h2>
+<p>A <b>string</b> is a sequence of characters. Strings are used for names, messages, labels, sentences and many other kinds of text.</p>
+
+<h3>Creating strings</h3>
+<pre><code>name = "Kiran"
+course = 'Python Programming'</code></pre>
+
 <h3>Operations on strings</h3>
 <pre><code>first = "Python"
 second = "Programming"
 
-print(first + " " + second)
-print("Hi! " * 3)
-print(len(first))
-print(first[0])
-print(first[0:3])</code></pre>
+print(first + " " + second)  # concatenation
+print("Hi! " * 3)            # repetition
+print(len(first))            # length
+print(first[0])              # indexing
+print(first[0:3])            # slicing</code></pre>
+<p><b>Concatenation</b> joins strings. <b>Indexing</b> accesses a character. <b>Slicing</b> extracts a portion of a string.</p>
+
 <h3>Input</h3>
+<p>The <code>input()</code> function pauses the program and waits for the user to enter data. The returned value is a string.</p>
 <pre><code>name = input("Enter your name: ")
 print("Hello", name)</code></pre>
-<p><code>input()</code> returns text. Convert it when a numeric value is required.</p>
-<pre><code>age = int(input("Enter age: "))
-print(age + 1)</code></pre>
+
+<h3>Input with numbers</h3>
+<pre><code>age = int(input("Enter your age: "))
+next_year = age + 1
+print("Next year:", next_year)</code></pre>
+<div class="observe"><b>Observe:</b> Without <code>int()</code>, the value from <code>input()</code> would be text. Converting it allows arithmetic.</div>
+
 <h3>Composition</h3>
-<p>Programs become useful when small operations are composed into a larger solution.</p>
+<p><b>Composition</b> means combining simple operations to create a larger solution. For example, input + conversion + calculation + output can form a complete program.</p>
+<pre><code>length = float(input("Length: "))
+width = float(input("Width: "))
+
+area = length * width
+
+print("Area =", area)</code></pre>
+
 <h3>The modulus operator</h3>
-<pre><code>print(17 % 5)   # remainder</code></pre>
-<div class="callout"><b>Think:</b> Where could a remainder be useful? Hint: checking whether a number is even.</div>
+<p>The modulus operator <code>%</code> gives the remainder after division.</p>
+<pre><code>print(17 % 5)   # 2
+print(20 % 4)   # 0</code></pre>
+<p>It is useful for checking even/odd numbers, repeating patterns, cycles and divisibility.</p>
 <pre><code>n = int(input("Enter a number: "))
+
 if n % 2 == 0:
     print("Even")
 else:
     print("Odd")</code></pre>
+
+<div class="try"><b>Try:</b> Build a small program that asks for two numbers and displays their sum, difference, product and remainder.</div>
 </section>
 
 <section id="iteration" class="lesson">
 <div class="tag">04 · ITERATION</div>
 <h2>Teach the computer to repeat</h2>
-<p>Iteration means repeating a set of instructions. Python provides <code>for</code> and <code>while</code> loops.</p>
+<p>Many programming tasks contain repetition: printing numbers, processing marks, generating tables or checking each item in a collection. <b>Iteration</b> allows a program to repeat instructions efficiently.</p>
+
 <h3>Assignment and updating variables</h3>
 <pre><code>count = 0
 count = count + 1
 count += 1
 print(count)</code></pre>
+<p>The value of a variable can change during program execution. This is called <b>updating</b> the variable.</p>
+
 <h3>The for loop</h3>
+<p>A <code>for</code> loop is useful when we want to repeat an action for each value in a sequence or range.</p>
 <pre><code>for i in range(1, 6):
     print(i)</code></pre>
-<div class="callout"><b>Predict:</b> How many times does the body execute? What values does <code>i</code> take?</div>
+<p><code>range(1, 6)</code> generates 1, 2, 3, 4 and 5. The stopping value 6 is not included.</p>
+<div class="predict"><b>Predict:</b> How many times will the body execute? What is the final value printed?</div>
+
 <h3>The while statement</h3>
+<p>A <code>while</code> loop continues as long as its condition is true. The programmer must ensure that the condition eventually becomes false.</p>
 <pre><code>n = 1
+
 while n <= 5:
     print(n)
     n += 1</code></pre>
-<h3>Collatz 3n + 1 sequence</h3>
+<div class="warning"><b>Watch out:</b> If you forget to update <code>n</code>, the condition may remain true forever and create an infinite loop.</div>
+
+<h3>The Collatz 3n + 1 sequence</h3>
+<p>For a positive integer <code>n</code>: if it is even, divide it by 2; if it is odd, multiply it by 3 and add 1. Continue until reaching 1.</p>
 <pre><code>n = 6
+
 while n != 1:
     print(n)
+
     if n % 2 == 0:
         n = n // 2
     else:
         n = 3 * n + 1
+
 print(1)</code></pre>
-<h3>Tables and two-dimensional tables</h3>
-<pre><code>for i in range(1, 6):
-    print(i, i*i)</code></pre>
+<p>This example combines <b>variables, modulus, selection, integer division and iteration</b>.</p>
+
+<h3>Tables</h3>
+<pre><code>number = 5
+
+for i in range(1, 11):
+    print(number, "x", i, "=", number * i)</code></pre>
+
+<h3>Two-dimensional tables</h3>
+<p>When data has rows and columns, nested loops are often useful.</p>
 <pre><code>for row in range(1, 4):
     for col in range(1, 5):
         print(row * col, end=" ")
     print()</code></pre>
-<h3>break and continue</h3>
+<p>The outer loop controls the rows. The inner loop completes all columns for the current row.</p>
+
+<h3>break statement</h3>
+<p><code>break</code> immediately terminates the nearest loop.</p>
 <pre><code>for n in range(1, 11):
     if n == 6:
         break
     print(n)</code></pre>
+
+<h3>continue statement</h3>
+<p><code>continue</code> skips the remaining statements in the current iteration and moves to the next iteration.</p>
 <pre><code>for n in range(1, 6):
     if n == 3:
         continue
     print(n)</code></pre>
+
 <h3>Paired data</h3>
+<p>Sometimes two sequences contain related information. <code>zip()</code> can pair corresponding values.</p>
 <pre><code>names = ["Asha", "Ravi", "Meena"]
 marks = [82, 74, 91]
 
 for name, mark in zip(names, marks):
     print(name, mark)</code></pre>
+
 <h3>Nested loops for nested data</h3>
 <pre><code>data = [[1, 2], [3, 4], [5, 6]]
 
@@ -195,48 +313,81 @@ for row in data:
     for value in row:
         print(value, end=" ")
     print()</code></pre>
-<div class="challenge"><b>Challenge:</b> Write a program to print a 5 × 5 multiplication table using nested loops.</div>
+
+<div class="challenge"><b>Challenge:</b> Create a 5 × 5 multiplication table using nested loops. Then modify it to print only even products.</div>
+<div class="takeaway"><b>Takeaway:</b> Use <code>for</code> when iterating through a known sequence/range, and <code>while</code> when repetition depends on a condition.</div>
 </section>
 
 <section id="functions" class="lesson">
 <div class="tag">05 · FUNCTIONS</div>
-<h2>Build reusable pieces</h2>
-<p>A function groups instructions into a named, reusable unit. Arguments provide input and a return value sends a result back.</p>
-<pre><code>def add(a, b):
-    return a + b
+<h2>Break a problem into reusable pieces</h2>
+<p>As programs become larger, putting everything into one long sequence makes them difficult to understand and test. A <b>function</b> groups related instructions into a named unit that can be called whenever needed.</p>
 
-result = add(10, 20)
-print(result)</code></pre>
-<div class="grid3">
- <div><b>Define</b><p>Use <code>def</code> to create the function.</p></div>
- <div><b>Call</b><p>Pass arguments when you need the function.</p></div>
- <div><b>Return</b><p>Send a result back to the caller.</p></div>
+<h3>Function with arguments and return value</h3>
+<pre><code>def add(a, b):
+    result = a + b
+    return result
+
+answer = add(10, 20)
+print(answer)</code></pre>
+
+<div class="concept-grid">
+<div><b>Function definition</b><p><code>def add(a, b):</code> creates the function.</p></div>
+<div><b>Arguments</b><p><code>10</code> and <code>20</code> are values passed to the function.</p></div>
+<div><b>Return value</b><p><code>return</code> sends the calculated result back to the caller.</p></div>
 </div>
-<div class="challenge"><b>Try:</b> Create <code>square(n)</code> that returns the square of a number.</div>
+
+<h3>Why use functions?</h3>
+<ul>
+<li>Reduce repetition.</li>
+<li>Make programs easier to read.</li>
+<li>Make testing easier.</li>
+<li>Divide a large problem into smaller problems.</li>
+<li>Reuse the same logic with different inputs.</li>
+</ul>
+
+<h3>Example: square of a number</h3>
+<pre><code>def square(n):
+    return n * n
+
+print(square(5))
+print(square(12))</code></pre>
+
+<h3>Example: checking even number</h3>
+<pre><code>def is_even(n):
+    return n % 2 == 0
+
+number = int(input("Enter number: "))
+
+if is_even(number):
+    print("Even")
+else:
+    print("Odd")</code></pre>
+
+<div class="try"><b>Try:</b> Write <code>maximum(a, b)</code> that returns the larger of two numbers. Then test it with at least three pairs of values.</div>
+<div class="takeaway"><b>Takeaway:</b> Functions help us turn a large problem into small, understandable and reusable pieces.</div>
 </section>
 
 <section id="practice" class="lesson">
 <div class="tag">🧪 PRACTICE</div>
-<h2>Predict → Run → Explain</h2>
-<div class="practice-item"><b>1.</b> What is the output?
-<pre><code>x = 5
-y = 2
-print(x % y)</code></pre></div>
-<div class="practice-item"><b>2.</b> Find the error:
-<pre><code>for i in range(5)
-    print(i)</code></pre></div>
-<div class="practice-item"><b>3.</b> Write a program to print numbers from 1 to 10.</div>
-<div class="practice-item"><b>4.</b> Write a function <code>maximum(a, b)</code> that returns the larger value.</div>
-<div class="practice-item"><b>5.</b> Use nested loops to print:
-<pre><code>1 2 3
-1 2 3
-1 2 3</code></pre></div>
+<h2>Practice before the quiz</h2>
+<p>For every question use: <b>Predict → Run → Observe → Explain.</b></p>
+<div class="practice-item"><b>1 · Variables:</b> Create variables for student name, semester and CGPA. Display them.</div>
+<div class="practice-item"><b>2 · Expressions:</b> Predict the output of <code>10 + 2 * 3</code> and <code>(10 + 2) * 3</code>.</div>
+<div class="practice-item"><b>3 · Strings:</b> Ask for a name and print the first three characters.</div>
+<div class="practice-item"><b>4 · Modulus:</b> Read a number and determine whether it is divisible by 5.</div>
+<div class="practice-item"><b>5 · for loop:</b> Print the first 10 natural numbers and their squares.</div>
+<div class="practice-item"><b>6 · while:</b> Print numbers from 10 down to 1.</div>
+<div class="practice-item"><b>7 · break:</b> Search for a number in a list and stop when it is found.</div>
+<div class="practice-item"><b>8 · continue:</b> Print numbers from 1 to 20 but skip multiples of 3.</div>
+<div class="practice-item"><b>9 · nested loops:</b> Print a 5 × 5 multiplication table.</div>
+<div class="practice-item"><b>10 · function:</b> Write a function that accepts three marks and returns their average.</div>
 </section>
 
 <section id="quiz" class="lesson">
 <div class="tag">🎯 QUIZ · 10 MARKS</div>
 <h2>Module 1 Knowledge Check</h2>
-<p>10 questions · 1 mark each. Select an answer and submit. You can retry.</p>
+<p>10 questions · 1 mark each. Select an answer and submit. Correct answers are highlighted after submission.</p>
 <div id="quizBox"></div>
 <button class="btn primary" id="submitQuiz">Submit Quiz</button>
 <button class="btn" id="resetQuiz">Reset</button>
@@ -247,29 +398,27 @@ print(x % y)</code></pre></div>
 <div class="tag">📝 ASSIGNMENT · 20 MARKS</div>
 <h2>Module 1 Coding Assignment</h2>
 <ol>
-<li><b>Concepts — 4 marks:</b> Explain syntax, runtime and semantic errors with one example each.</li>
-<li><b>Predict output — 4 marks:</b> Write the output of two given Python snippets and explain your reasoning.</li>
-<li><b>Debug — 4 marks:</b> Find and correct errors in two programs.</li>
-<li><b>Iteration — 4 marks:</b> Write a program using loops to generate a multiplication table.</li>
-<li><b>Functions — 4 marks:</b> Write a function with arguments and a return value to solve a small problem.</li>
+<li><b>Concepts — 4 marks:</b> Explain syntax, runtime and semantic errors with one original example each.</li>
+<li><b>Predict output — 4 marks:</b> Predict and explain the output of two Python programs involving expressions and loops.</li>
+<li><b>Debugging — 4 marks:</b> Find, classify and correct two faulty Python programs.</li>
+<li><b>Iteration — 4 marks:</b> Write a program to generate a multiplication table using a loop and explain the loop.</li>
+<li><b>Functions — 4 marks:</b> Write a function with arguments and a return value to solve a small real-world problem.</li>
 </ol>
-<div class="callout"><b>Submission evidence:</b> Include source code, sample input/output and a short explanation of how you tested your program.</div>
+<div class="callout"><b>Submission evidence:</b> Include source code, sample input/output, test cases and a short explanation of how you tested your program.</div>
 </section>
 
 <section id="fa" class="lesson">
 <div class="tag">🏆 FORMATIVE ASSESSMENT · 20 MARKS</div>
 <h2>Show what you can do</h2>
 <div class="assessment">
-<div><b>Individual · 7 marks</b><p>Think, Code & Debug — identify an error, correct the program, test it and explain the fix.</p></div>
-<div><b>Group · 7 marks</b><p>Debugging Team Challenge — analyse, classify, fix and demonstrate a faulty program.</p></div>
-<div><b>Presentation · 6 marks</b><p>Explain It Like a Programmer — explain one Module 1 concept with a Python demonstration.</p></div>
+<div><b>Individual · 7 marks</b><p>Think, Code & Debug — analyse a problem, write/correct code, test it and explain the reasoning.</p></div>
+<div><b>Group · 7 marks</b><p>Debugging Team Challenge — classify errors, propose a hypothesis, fix the program and demonstrate evidence.</p></div>
+<div><b>Presentation · 6 marks</b><p>Explain It Like a Programmer — explain one Module 1 concept with a Python demonstration and answer questions.</p></div>
 </div>
 <table><tr><th>Component</th><th>Marks</th></tr><tr><td>Individual</td><td>7</td></tr><tr><td>Group</td><td>7</td></tr><tr><td>Presentation</td><td>6</td></tr><tr><th>Total</th><th>20</th></tr></table>
 </section>
 
-<footer>
-<b>Prof. Kiran Mudaraddi</b> · Assistant Professor, CSE · Ballari Institute of Technology & Management (BITM), Ballari
-</footer>
+<footer><b>Prof. Kiran Mudaraddi</b> · Assistant Professor, CSE · Ballari Institute of Technology & Management (BITM), Ballari</footer>
 </main>
 </div>
 <script src="assets/app.js"></script>
