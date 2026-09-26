@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwpNB9gxn_iLvTL9_avISIjhPcIliIiMJ0BM11HPIYqtf7SlpWdjj-3rgm-lhidj9f2qQ/exec";
 
 function showStudentForm() {
   const quizSection = document.getElementById("quiz");
