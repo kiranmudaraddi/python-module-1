@@ -36,7 +36,34 @@ body.dark{--bg:#0b1020;--card:#111827;--text:#edf2f7;--muted:#9aa7ba;--line:#263
 .side-topic:hover b{color:var(--accent)}
 .side-tools{border-top:1px solid var(--line);margin-top:12px;padding-top:10px}
 .side-tools a{display:flex!important;align-items:center;gap:9px;padding:8px 10px!important;font-size:12.5px!important}
-.side-tools span{width:18px;text-align:center}
+.side-tools span{width:18px;text-align:center}.notes-download{
+display:flex!important;
+align-items:center;
+gap:9px;
+margin-top:4px;
+padding:10px 10px!important;
+border-radius:9px!important;
+background:linear-gradient(135deg,#eef5ff,#f8fbff);
+border:1px solid #dbe8f7;
+color:#245b8f!important;
+font-size:12.5px!important;
+font-weight:800!important;
+}
+.notes-download:hover{
+background:linear-gradient(135deg,#e2efff,#eef6ff)!important;
+color:#1d4ed8!important;
+border-color:#bfd8f2;
+transform:translateY(-1px);
+}
+body.dark .notes-download{
+background:linear-gradient(135deg,#17263a,#152033);
+border-color:#304765;
+color:#9dccff!important;
+}
+body.dark .notes-download:hover{
+background:#1b3049!important;
+color:#b9dcff!important;
+}
 body.dark .side-home{background:#182342;color:#8ca9ff!important}
 body.dark .side-topic{color:#aab5c8!important}
 body.dark .side-topic:hover{background:#182334!important;color:#74b9ff!important}
@@ -169,6 +196,7 @@ body.dark .topic-question{background:linear-gradient(90deg,#101b31,#111827);bord
 </div>
 <div class="side-tools">
 <a href="#practice"><span>🧪</span> Practice</a>
+<a class="notes-download" href="MODULE-1_PYTHON_NOTES.pdf" download><span>📘</span> Download Module 1 Notes</a>
 <a href="#assessment"><span>🎯</span> Quiz · 10 Marks</a>
 <a href="#assessment"><span>📝</span> Assignment · 20 Marks</a>
 <a href="#assessment"><span>🏆</span> Formative Assessment</a>
