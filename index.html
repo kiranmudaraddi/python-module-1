@@ -141,6 +141,27 @@ body.dark .side-part span{color:#74b9ff}
 .diagram{margin:22px 0;padding:20px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#fff, #f6f9fd);overflow:auto}.diagram-title{font-weight:800;text-align:center;margin-bottom:14px;color:var(--text)}.flow{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}.node{min-width:130px;padding:13px 16px;border:2px solid #3776ab;border-radius:12px;background:#fff;text-align:center;font-weight:700;box-shadow:0 5px 12px rgba(20,30,50,.06)}.node.process{border-radius:8px}.node.decision{transform:rotate(45deg);width:105px;height:105px;min-width:105px;display:grid;place-items:center}.node.decision span{transform:rotate(-45deg)}.arrow{font-size:24px;font-weight:900;color:#3776ab}.stack{display:flex;flex-direction:column;align-items:center;gap:8px}.loopbox{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:720px;margin:auto}.mini{padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff}.mini b{display:block;margin-bottom:4px}.code-flow{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap}.code-flow .node{min-width:150px}.matrix{display:grid;grid-template-columns:repeat(4,minmax(70px,1fr));gap:6px;max-width:520px;margin:auto}.matrix span{padding:10px;text-align:center;border:1px solid #cbd5e1;border-radius:8px;background:#fff}.fnflow{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}.fnflow .node{min-width:145px}.cycle{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:700px;margin:auto}.cycle .mini{text-align:center}.varbox{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap}.memory{padding:18px 24px;border:2px solid #3776ab;border-radius:14px;background:#fff;min-width:190px;text-align:center}.pointer{font-size:28px;color:#3776ab}.dark .diagram{background:#111827;border-color:#374151}.dark .node,.dark .mini,.dark .matrix span,.dark .memory{background:#18212f;border-color:#4b647c}.dark .diagram-title{color:#f3f4f6}
 @media(max-width:700px){.loopbox,.cycle{grid-template-columns:1fr}.matrix{grid-template-columns:repeat(2,1fr)}.code-head{padding-left:68px}}
 
+
+/* Browser Python Runner */
+.python-runner{max-width:1180px;margin:0 auto;padding:32px 24px 60px}
+.runner-card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:24px;box-shadow:0 12px 35px rgba(15,23,42,.06)}
+.runner-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.runner-head h2{margin:0;font-size:clamp(1.45rem,2.6vw,2rem)}
+.runner-head p{margin:5px 0 0;color:var(--muted);line-height:1.55}
+.runner-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:16px}
+.runner-label{display:block;font-weight:800;margin:0 0 8px}
+.runner-code,.runner-input{width:100%;box-sizing:border-box;border:1px solid var(--border);border-radius:13px;background:#0b1220;color:#e5eefb;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;line-height:1.6;padding:14px;outline:none;resize:vertical}
+.runner-code{min-height:270px}
+.runner-input{min-height:115px}
+.runner-code:focus,.runner-input:focus{border-color:#60a5fa;box-shadow:0 0 0 3px rgba(96,165,250,.15)}
+.runner-output{margin-top:16px}
+.runner-output pre{margin:0;min-height:95px;white-space:pre-wrap;word-break:break-word;background:#07101d;color:#dbeafe;border:1px solid var(--border);border-radius:13px;padding:14px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;line-height:1.6}
+.runner-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.runner-btn{border:0;border-radius:10px;padding:11px 18px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,#4f46e5,#2563eb);color:#fff}
+.runner-btn.secondary{background:var(--soft);color:var(--text);border:1px solid var(--border)}
+.runner-status{font-size:.9rem;color:var(--muted);margin-top:9px}
+@media(max-width:800px){.runner-grid{grid-template-columns:1fr}.python-runner{padding:24px 14px 45px}.runner-code{min-height:230px}}
+
 /* Question Bank & Quiz */
 .assessment-wrap{max-width:1180px;margin:0 auto;padding:32px 24px 70px}
 .assessment-hero{background:linear-gradient(135deg,var(--card),var(--soft));border:1px solid var(--border);border-radius:24px;padding:28px;margin-bottom:24px}
@@ -263,6 +284,7 @@ body.dark .topic-question{background:linear-gradient(90deg,#101b31,#111827);bord
 </div>
 <div class="side-tools">
 <a href="#practice"><span>🧪</span> Practice</a>
+<a href="#python-runner"><span>▶️</span> Run Python</a>
 <a class="notes-download" href="MODULE-1_PYTHON_NOTES.pdf" download><span>📘</span> Download Module 1 Notes</a>
 <a href="#assessment"><span>🎯</span> Quiz · 10 Marks</a>
 <a href="#assessment"><span>📝</span> Assignment · 20 Marks</a>
@@ -409,6 +431,18 @@ print(result)</code></pre><div class="output"><b>Expected output</b><pre>19.3333
 
 answer = square(6)
 print(answer)</code></pre><div class="output"><b>Expected output</b><pre>36</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article>
+<section class="python-runner" id="python-runner">
+<div class="runner-card">
+<div class="runner-head"><div><h2>▶ Run Python in Your Browser</h2><p>Write, change and test Python programs without installing Python. Try the examples from Module 1 and observe the output.</p></div></div>
+<div class="runner-grid">
+<div><label class="runner-label" for="pythonCode">Python Program</label><textarea id="pythonCode" class="runner-code" spellcheck="false">name = input("Enter your name: ")
+print("Hello", name)</textarea></div>
+<div><label class="runner-label" for="pythonInput">Input values</label><textarea id="pythonInput" class="runner-input" spellcheck="false">Kiran</textarea><div class="runner-status">For programs using input(), enter one value per line.</div></div>
+</div>
+<div class="runner-actions"><button class="runner-btn" type="button" onclick="runPythonCode()">▶ Run Python</button><button class="runner-btn secondary" type="button" onclick="loadPythonExample()">↻ Load Example</button><button class="runner-btn secondary" type="button" onclick="clearPythonRunner()">Clear</button></div>
+<div class="runner-output"><label class="runner-label">Output</label><pre id="pythonOutput">Ready. Click “Run Python”.</pre></div>
+<div class="runner-status" id="pythonStatus">Python engine will load when you first run a program.</div>
+</div></section>
 <section class="part" id="practice"><div class="part-label">PRACTICE</div><h2>Solved Practice Programs</h2><p class="part-intro">Additional programs from the notes that combine Module 1 concepts.</p><div class="practice-list"><details class="practice"><summary>Swap Two Variables</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>a = int(input("Enter a: "))
 b = int(input("Enter b: "))
 a, b = b, a
@@ -524,7 +558,7 @@ function copyCode(btn){const code=btn.closest('.code-card').querySelector('code'
 
 const quizAnswers=[0, 1, 0, 2, 0, 2, 1, 2, 0, 0, 1, 1, 2, 1, 0, 1, 1, 2, 0, 1];
 // Paste your deployed Google Apps Script Web App URL here after creating the Sheet connection.
-const SHEETS_WEB_APP_URL='PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const SHEETS_WEB_APP_URL='https://script.google.com/macros/s/AKfycbwpNB9gxn_iLvTL9_avISIjhPcIliIiMJ0BM11HPIYqtf7SlpWdjj-3rgm-lhidj9f2qQ/exec';
 
 function getStudentDetails(){
   return {
@@ -595,5 +629,85 @@ document.addEventListener('click',function(e){
 window.addEventListener('resize',function(){
   if(window.innerWidth>980){ document.body.classList.remove('menu-open'); document.body.style.overflow=''; }
 });
+
+
+let pyodideInstance=null;
+let pyodideLoading=null;
+async function getPyodide(){
+  if(pyodideInstance) return pyodideInstance;
+  if(!pyodideLoading){
+    document.getElementById('pythonStatus').textContent='Loading Python engine… first run may take a few seconds.';
+    pyodideLoading=(async()=>{
+      const mod=await import('https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.mjs');
+      const py=await mod.loadPyodide();
+      return py;
+    })();
+  }
+  pyodideInstance=await pyodideLoading;
+  return pyodideInstance;
+}
+async function runPythonCode(){
+  const code=document.getElementById('pythonCode').value;
+  const inputText=document.getElementById('pythonInput').value;
+  const out=document.getElementById('pythonOutput');
+  const status=document.getElementById('pythonStatus');
+  if(!code.trim()){out.textContent='Please enter a Python program.';return;}
+  out.textContent='Running…';
+  try{
+    const py=await getPyodide();
+    py.globals.set('JS_CODE',code);
+    py.globals.set('JS_INPUT',inputText);
+    const result=await py.runPythonAsync(`
+import sys, io, builtins, traceback
+_code = JS_CODE
+_input_text = JS_INPUT
+_lines = _input_text.splitlines()
+_index = 0
+_out = io.StringIO()
+def _browser_input(prompt=''):
+    global _index
+    if _index >= len(_lines):
+        raise EOFError('No more input values were provided.')
+    value = _lines[_index]
+    _index += 1
+    print(str(prompt), end='')
+    print(value)
+    return value
+builtins.input = _browser_input
+_old_stdout, _old_stderr = sys.stdout, sys.stderr
+sys.stdout = _out
+sys.stderr = _out
+try:
+    exec(compile(_code, '<student_program>', 'exec'), {'__name__':'__main__'})
+except Exception:
+    traceback.print_exc()
+finally:
+    sys.stdout, sys.stderr = _old_stdout, _old_stderr
+_out.getvalue()
+`);
+    out.textContent=result || '(Program finished with no printed output.)';
+    status.textContent='Program finished. Change the code or input and run it again.';
+  }catch(err){
+    out.textContent='Runner error: '+(err && err.message ? err.message : err);
+    status.textContent='The Python engine could not run this program. Check the code and try again.';
+  }
+}
+function loadPythonExample(){
+  document.getElementById('pythonCode').value=`marks = [78, 85, 91, 67, 88]
+total = 0
+for mark in marks:
+    total += mark
+average = total / len(marks)
+print('Average =', average)`;
+  document.getElementById('pythonInput').value='';
+  document.getElementById('pythonOutput').textContent='Example loaded. Click “Run Python”.';
+  document.getElementById('pythonStatus').textContent='Try changing the values or loop and observe the output.';
+}
+function clearPythonRunner(){
+  document.getElementById('pythonCode').value='';
+  document.getElementById('pythonInput').value='';
+  document.getElementById('pythonOutput').textContent='Ready. Enter a Python program and click “Run Python”.';
+  document.getElementById('pythonStatus').textContent='';
+}
 
 </script></body></html>
