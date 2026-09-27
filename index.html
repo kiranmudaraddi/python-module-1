@@ -28,30 +28,51 @@ line-height:1;
 }
 .mobile-overlay{display:none}
 @media(max-width:980px){
-  .mobile-menu-btn{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
-  .course-sidebar{
-    display:block;
-    position:fixed;
-    left:0;
-    top:61px;
-    bottom:0;
-    width:min(330px,88vw);
-    height:auto;
-    z-index:80;
-    overflow-y:auto;
-    transform:translateX(-105%);
-    transition:transform .25s ease;
-    box-shadow:12px 0 35px rgba(15,23,42,.18);
+  .mobile-menu-btn{
+    display:inline-flex!important;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    min-width:78px;
+    height:42px;
+    border:1px solid var(--line);
+    background:var(--card);
+    color:var(--text);
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:800;
+    font-size:15px;
+    line-height:1;
+    position:relative;
+    z-index:101;
   }
-  body.menu-open .course-sidebar{transform:translateX(0)}
+  .course-sidebar{
+    display:block!important;
+    visibility:visible!important;
+    position:fixed!important;
+    left:0!important;
+    top:61px!important;
+    bottom:0!important;
+    width:min(330px,88vw)!important;
+    height:auto!important;
+    z-index:100!important;
+    overflow-y:auto!important;
+    transform:translateX(-110%)!important;
+    transition:transform .25s ease!important;
+    box-shadow:12px 0 35px rgba(15,23,42,.22);
+  }
+  body.menu-open .course-sidebar{
+    display:block!important;
+    transform:translateX(0)!important;
+  }
   .mobile-overlay{
-    position:fixed;
-    inset:61px 0 0 0;
-    z-index:70;
+    position:fixed!important;
+    inset:61px 0 0 0!important;
+    z-index:90!important;
     background:rgba(15,23,42,.42);
     backdrop-filter:blur(2px);
   }
-  body.menu-open .mobile-overlay{display:block}
+  body.menu-open .mobile-overlay{display:block!important}
 }
 @media(max-width:650px){
   .top{gap:8px}
@@ -187,7 +208,7 @@ body.dark .topic-question{background:linear-gradient(90deg,#101b31,#111827);bord
 .dark .assessment-note{background:#111b30}
 @media(max-width:760px){.student-details{grid-template-columns:1fr}.quiz-actions{position:sticky;bottom:8px;flex-wrap:wrap}}
 </style></head><body><div class="progress" id="progress"></div>
-<header><div class="top"><button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open module menu" aria-expanded="false">☰</button><a class="brand" href="#top">Python <span>Module 1</span></a><div class="search"><input id="search" oninput="filterTopics()" placeholder="Search topics, loops, functions..."/></div><button class="theme" onclick="toggleTheme()">☾</button></div></header><div class="mobile-overlay" onclick="toggleMobileMenu()"></div>
+<header><div class="top"><button type="button" class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open module menu" aria-expanded="false">☰ MENU</button><a class="brand" href="#top">Python <span>Module 1</span></a><div class="search"><input id="search" oninput="filterTopics()" placeholder="Search topics, loops, functions..."/></div><button class="theme" onclick="toggleTheme()">☾</button></div></header><div class="mobile-overlay" onclick="toggleMobileMenu()"></div>
 <div class="layout"><aside class="course-sidebar">
 <div class="side-module">
 <div class="side-kicker">MODULE 1</div>
@@ -562,16 +583,17 @@ function resetQuiz(){
 }
 
 function toggleMobileMenu(){
-  document.body.classList.toggle('menu-open');
+  const open=document.body.classList.toggle('menu-open');
   const btn=document.querySelector('.mobile-menu-btn');
-  if(btn) btn.setAttribute('aria-expanded',document.body.classList.contains('menu-open')?'true':'false');
+  if(btn) btn.setAttribute('aria-expanded',open?'true':'false');
+  document.body.style.overflow=(open && window.innerWidth<=980)?'hidden':'';
 }
 document.addEventListener('click',function(e){
   const link=e.target.closest('.course-sidebar a');
-  if(link && window.innerWidth<=980) document.body.classList.remove('menu-open');
+  if(link && window.innerWidth<=980){ document.body.classList.remove('menu-open'); document.body.style.overflow=''; }
 });
 window.addEventListener('resize',function(){
-  if(window.innerWidth>980) document.body.classList.remove('menu-open');
+  if(window.innerWidth>980){ document.body.classList.remove('menu-open'); document.body.style.overflow=''; }
 });
 
 </script></body></html>
