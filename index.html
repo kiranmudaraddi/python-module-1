@@ -1,426 +1,416 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Module 1 | Python Programming Fundamentals</title>
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-<header class="topbar">
-  <div class="brand">🐍 Python Programming</div>
-  <button id="themeBtn" class="iconbtn">☾</button>
-</header>
 
-<div class="layout">
-<aside class="sidebar">
-  <div class="course-title">MODULE 1<br><span>Python Programming Fundamentals</span></div>
-  <nav>
-    <a href="#home">🏠 Home</a>
-    <a href="#way">01 · The Way of the Program</a>
-    <a href="#variables">02 · Variables & Expressions</a>
-    <a href="#strings">03 · Strings & Input</a>
-    <a href="#iteration">04 · Iteration</a>
-    <a href="#functions">05 · Functions</a>
-    <a href="#practice">🧪 Practice</a>
-    <a href="#quiz">🎯 Quiz · 10 Marks</a>
-    <a href="#assignment">📝 Assignment · 20 Marks</a>
-    <a href="#fa">🏆 Formative Assessment · 20</a>
-  </nav>
-</aside>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Interactive Python Programming Module 1 — Kiran Mudaraddi" name="description"/><title>Python Programming · Module 1 | Kiran Mudaraddi</title>
+<style>
+:root{--bg:#f7f8fc;--card:#fff;--text:#18212f;--muted:#637083;--line:#e4e8ef;--accent:#3776ab;--accent2:#ffd343;--code:#111827;--codeText:#e5e7eb;--shadow:0 10px 30px rgba(20,30,50,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}a{color:inherit;text-decoration:none}button,input{font:inherit}.progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));z-index:99}
+header{position:sticky;top:0;z-index:50;background:rgba(247,248,252,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.top{max-width:1400px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:14px}.brand{font-weight:900;letter-spacing:-.03em;white-space:nowrap}.brand span{color:var(--accent)}.search{flex:1;max-width:600px;margin:auto}.search input{width:100%;padding:11px 15px;border:1px solid var(--line);border-radius:12px;background:var(--card);outline:none}.theme{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:9px 12px;cursor:pointer}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:auto}aside{position:sticky;top:61px;height:calc(100vh - 61px);overflow:auto;padding:24px 14px;border-right:1px solid var(--line);background:rgba(255,255,255,.45)}aside h4{margin:8px 10px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em}aside a{display:block;padding:7px 10px;border-radius:8px;color:var(--muted);font-size:13px}aside a:hover{background:#edf4fb;color:var(--accent)}main{min-width:0}.hero{padding:70px 6vw 55px;background:radial-gradient(circle at 85% 15%,rgba(55,118,171,.13),transparent 30%),radial-gradient(circle at 10% 10%,rgba(255,211,67,.15),transparent 25%)}.eyebrow{display:inline-flex;padding:6px 10px;border-radius:99px;background:#eaf2f9;color:var(--accent);font-weight:800;font-size:12px}h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-.06em;margin:18px 0}.hero p{max-width:800px;font-size:18px;color:var(--muted)}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.pill{padding:8px 12px;border:1px solid var(--line);border-radius:99px;background:var(--card);font-size:13px}
+.content{padding:30px 6vw 90px}.part{padding:45px 0 25px;border-top:1px solid var(--line);scroll-margin-top:80px}.part-label{font-size:12px;font-weight:900;letter-spacing:.16em;color:var(--accent)}.part h2{font-size:32px;margin:5px 0}.part-intro{color:var(--muted)}.topic{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:25px 0;border-bottom:1px solid var(--line);scroll-margin-top:80px}.topic-num{width:46px;height:46px;border-radius:14px;background:var(--code);color:#fff;display:grid;place-items:center;font-weight:900}.topic h3{margin:0 0 12px;font-size:24px;letter-spacing:-.02em}.desc{font-size:16px}.four{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 18px}.four>div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px}.four b{display:block;color:var(--accent);font-size:11px;letter-spacing:.1em}.four span{font-size:13px;color:var(--muted)}.code-card{margin:16px 0;background:var(--code);border-radius:15px;overflow:hidden;box-shadow:var(--shadow)}.code-head{display:flex;justify-content:space-between;align-items:center;padding:9px 13px;background:#0b1220;color:#9ca3af;font-size:12px}.copy{border:1px solid #334155;background:#172033;color:#e5e7eb;border-radius:8px;padding:5px 9px;cursor:pointer}pre{margin:0;overflow:auto;white-space:pre-wrap}.code-card code{display:block;padding:16px;color:var(--codeText);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.55}.output{border-top:1px solid #263244;background:#0d1625;color:#cbd5e1;padding:10px 15px}.output b{font-size:11px;color:#ffd343;text-transform:uppercase;letter-spacing:.08em}.output pre{margin-top:5px;font-size:12px}.checkpoint{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:#eef7f1;border-left:4px solid #3c9a68;border-radius:10px;margin-top:14px}.checkpoint b{white-space:nowrap;color:#26724b}.checkpoint span{color:#496457;font-size:14px}
+.practice-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}details.practice{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:0;overflow:hidden}details.practice summary{padding:14px 16px;cursor:pointer;font-weight:800}details.practice .code-card{margin:0;border-radius:0;box-shadow:none}.appendix{padding-top:35px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.box{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:18px}.box h4{margin-top:0}.checklist li{margin:6px 0}
+footer{padding:35px 6vw;background:#101827;color:#cbd5e1}footer strong{color:white}
+.author-credit{display:flex;align-items:center;gap:14px;width:max-content;max-width:100%;margin:24px 0 8px;padding:13px 20px 13px 15px;border:1px solid #dbe5ef;border-left:5px solid #3776ab;background:linear-gradient(135deg,#ffffff 0%,#f4f8fc 100%);border-radius:14px;box-shadow:0 8px 24px rgba(55,118,171,.12);color:#334155;font-size:.92rem;line-height:1.3}.author-credit:before{content:"KM";display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:linear-gradient(135deg,#3776ab,#1f5f91);color:#fff;font-weight:900;font-size:13px;letter-spacing:.03em;box-shadow:0 5px 12px rgba(55,118,171,.25)}.author-credit strong{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:#64748b;margin-bottom:3px}.author-credit span{font-size:1.3rem;font-weight:900;letter-spacing:-.02em;background:linear-gradient(90deg,#1f5f91,#3776ab);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hidden{display:none!important}
+body.dark{--bg:#0b1020;--card:#111827;--text:#edf2f7;--muted:#9aa7ba;--line:#263244;--accent:#74b9ff;--code:#050a12;--codeText:#e5e7eb}body.dark header{background:rgba(11,16,32,.94)}body.dark .author-credit{border-color:#263b55;border-left-color:#74b9ff;background:linear-gradient(135deg,#111827,#172338);color:#cbd5e1;box-shadow:0 8px 24px rgba(0,0,0,.25)}body.dark .author-credit strong{color:#93a4b8}body.dark .author-credit span{background:linear-gradient(90deg,#74b9ff,#b8dcff);-webkit-background-clip:text;background-clip:text;color:transparent}body.dark aside{background:rgba(17,24,39,.55)}body.dark .four>div,body.dark .pill{background:#111827}body.dark .hero{background:radial-gradient(circle at 85% 15%,rgba(116,185,255,.13),transparent 30%)}
+@media(max-width:980px){.layout{grid-template-columns:1fr}aside{display:none}.four{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.top{padding:10px}.brand{font-size:14px}.search{display:none}.hero{padding:50px 22px 40px}.content{padding:20px 22px 60px}.topic{grid-template-columns:1fr}.topic-num{width:40px;height:40px}.four,.practice-list,.grid{grid-template-columns:1fr}h1{font-size:48px}}
 
-<main>
-<section id="home" class="hero">
-  <div class="eyebrow">MODULE 1 · 8 HOURS</div>
-  <h1>Python Programming<br><span>Fundamentals</span></h1>
-  <p class="lead">From your first instruction to reusable functions — learn by thinking, coding, observing and debugging.</p>
-  <div class="hero-actions">
-    <a class="btn primary" href="#way">Start Learning →</a>
-    <a class="btn" href="#quiz">Take Quiz</a>
-  </div>
-  <div class="author">Prepared & Maintained by <b>Prof. Kiran Mudaraddi</b><br>Assistant Professor, Department of CSE · BITM, Ballari</div>
-</section>
 
-<section class="learning-map">
-  <h2>How to learn this module</h2>
-  <div class="map"><span>Connect</span><i>→</i><span>Understand</span><i>→</i><span>Predict</span><i>→</i><span>Run</span><i>→</i><span>Observe</span><i>→</i><span>Debug</span><i>→</i><span>Apply</span></div>
-  <p>Do not just read the code. Before running a program, make a prediction. After running it, explain why the result happened.</p>
-</section>
+/* Screenshot-inspired course sidebar */
+.course-sidebar{padding:0 14px 28px;background:var(--card);border-right:1px solid var(--line)}
+.side-module{padding:34px 12px 22px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.side-kicker{font-size:12px;font-weight:950;letter-spacing:.08em;color:var(--text);margin-bottom:3px}
+.side-title{font-size:13px;color:var(--accent);line-height:1.45;font-weight:650}
+.side-subtitle{font-size:13px;color:var(--muted);line-height:1.45}
+.side-nav{padding-bottom:20px}
+.side-home{display:flex!important;align-items:center;gap:8px;margin:4px 0 10px;padding:10px 12px!important;font-weight:800!important;color:var(--accent)!important;background:#eef0ff}
+.side-home:hover{background:#e8eaff!important}
+.side-icon{font-size:18px;line-height:1}
+.side-section{margin:5px 0 12px}
+.side-part{padding:9px 10px 7px!important;border-radius:8px!important;color:var(--text)!important}
+.side-part:hover{background:transparent!important;color:var(--accent)!important}
+.side-part span{display:block;font-size:11px;font-weight:950;letter-spacing:.1em;color:var(--accent)}
+.side-part small{display:block;font-size:11px;line-height:1.35;color:var(--muted);margin-top:1px;font-weight:650}
+.side-topic{display:flex!important;align-items:flex-start;gap:8px;padding:6px 9px!important;margin:1px 0;border-radius:7px!important;font-size:12.5px!important;line-height:1.35!important;color:#526078!important}
+.side-topic b{min-width:22px;color:#64748b;font-size:11px;font-weight:800}
+.side-topic:hover{background:#f1f4fa!important;color:var(--accent)!important}
+.side-topic:hover b{color:var(--accent)}
+.side-tools{border-top:1px solid var(--line);margin-top:12px;padding-top:10px}
+.side-tools a{display:flex!important;align-items:center;gap:9px;padding:8px 10px!important;font-size:12.5px!important}
+.side-tools span{width:18px;text-align:center}
+body.dark .side-home{background:#182342;color:#8ca9ff!important}
+body.dark .side-topic{color:#aab5c8!important}
+body.dark .side-topic:hover{background:#182334!important;color:#74b9ff!important}
+body.dark .side-part span{color:#74b9ff}
+@media(max-width:980px){.course-sidebar{display:none}}
+/* macOS-style code window dots + learning diagrams */
+.code-head{display:flex;align-items:center;gap:8px;position:relative;padding-left:74px}.code-head:before{content:"";position:absolute;left:14px;top:50%;transform:translateY(-50%);width:11px;height:11px;border-radius:50%;background:#ff5f57;box-shadow:18px 0 #febc2e,36px 0 #28c840}.code-head i{display:none}.code-head span{font-weight:700}
+.diagram{margin:22px 0;padding:20px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#fff, #f6f9fd);overflow:auto}.diagram-title{font-weight:800;text-align:center;margin-bottom:14px;color:var(--text)}.flow{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}.node{min-width:130px;padding:13px 16px;border:2px solid #3776ab;border-radius:12px;background:#fff;text-align:center;font-weight:700;box-shadow:0 5px 12px rgba(20,30,50,.06)}.node.process{border-radius:8px}.node.decision{transform:rotate(45deg);width:105px;height:105px;min-width:105px;display:grid;place-items:center}.node.decision span{transform:rotate(-45deg)}.arrow{font-size:24px;font-weight:900;color:#3776ab}.stack{display:flex;flex-direction:column;align-items:center;gap:8px}.loopbox{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:720px;margin:auto}.mini{padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff}.mini b{display:block;margin-bottom:4px}.code-flow{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap}.code-flow .node{min-width:150px}.matrix{display:grid;grid-template-columns:repeat(4,minmax(70px,1fr));gap:6px;max-width:520px;margin:auto}.matrix span{padding:10px;text-align:center;border:1px solid #cbd5e1;border-radius:8px;background:#fff}.fnflow{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}.fnflow .node{min-width:145px}.cycle{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:700px;margin:auto}.cycle .mini{text-align:center}.varbox{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap}.memory{padding:18px 24px;border:2px solid #3776ab;border-radius:14px;background:#fff;min-width:190px;text-align:center}.pointer{font-size:28px;color:#3776ab}.dark .diagram{background:#111827;border-color:#374151}.dark .node,.dark .mini,.dark .matrix span,.dark .memory{background:#18212f;border-color:#4b647c}.dark .diagram-title{color:#f3f4f6}
+@media(max-width:700px){.loopbox,.cycle{grid-template-columns:1fr}.matrix{grid-template-columns:repeat(2,1fr)}.code-head{padding-left:68px}}
 
-<section class="cards">
- <article class="card"><b>01</b><h3>The Way of the Program</h3><p>Understand programs, Python and the debugging mindset.</p></article>
- <article class="card"><b>02</b><h3>Variables & Expressions</h3><p>Represent data and build expressions.</p></article>
- <article class="card"><b>03</b><h3>Strings & Input</h3><p>Work with text and interact with users.</p></article>
- <article class="card"><b>04</b><h3>Iteration</h3><p>Repeat instructions and process data.</p></article>
- <article class="card"><b>05</b><h3>Functions</h3><p>Build reusable problem-solving blocks.</p></article>
-</section>
+/* Question Bank & Quiz */
+.assessment-wrap{max-width:1180px;margin:0 auto;padding:32px 24px 70px}
+.assessment-hero{background:linear-gradient(135deg,var(--card),var(--soft));border:1px solid var(--border);border-radius:24px;padding:28px;margin-bottom:24px}
+.assessment-hero h2{margin:0 0 8px;font-size:clamp(1.7rem,3vw,2.5rem)}
+.assessment-hero p{margin:6px 0;color:var(--muted);line-height:1.65}
+.question-bank{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:18px}
+.q-item{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 16px;line-height:1.55}
+.q-num{font-weight:800;color:var(--accent);margin-right:6px}.q-section{margin:28px 0 10px;font-size:1.2rem}
+.quiz-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:22px;margin-top:28px;box-shadow:0 12px 30px rgba(0,0,0,.06)}
+.quiz-question{padding:18px 0;border-bottom:1px solid var(--border)}
+.quiz-question:last-child{border-bottom:0}.quiz-question h4{margin:0 0 12px}.quiz-option{display:block;margin:8px 0;padding:10px 12px;border:1px solid var(--border);border-radius:10px;cursor:pointer}
+.quiz-option:hover{background:var(--soft)}.quiz-option input{margin-right:9px}
+.quiz-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:18px}.quiz-btn{border:0;border-radius:10px;padding:11px 17px;background:var(--accent);color:#fff;font-weight:800;cursor:pointer}.quiz-reset{background:var(--soft);color:var(--text);border:1px solid var(--border)}
+.quiz-result{font-weight:800;margin-top:14px;padding:14px;border-radius:12px;background:var(--soft);display:none}.quiz-feedback{font-size:.92rem;color:var(--muted);margin-top:6px}
+.traffic{position:relative;display:inline-block;width:46px;height:14px;flex:0 0 46px}.traffic:before{content:'●  ●  ●';letter-spacing:4px;font-size:14px;line-height:14px;color:#ef4444;text-shadow:9px 0 #f59e0b,18px 0 #22c55e}.code-head .traffic{margin-right:4px}
+@media(max-width:700px){.assessment-wrap{padding:24px 14px 50px}.question-bank{grid-template-columns:1fr}}
 
-<section id="way" class="lesson">
-<div class="tag">01 · THE WAY OF THE PROGRAM</div>
-<h2>Think like a programmer</h2>
-<p>Programming starts with a simple idea: <b>give the computer precise instructions to solve a problem.</b> A computer does not normally “understand” our intention. It follows the instructions we provide.</p>
+/* Click-to-go syllabus navigation */
+.syllabus-title{margin:20px 0 8px;padding:10px 12px;border-radius:12px;background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #bfdbfe;color:#1d4ed8;font-size:.76rem;font-weight:900;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.syllabus-title span{font-size:.6rem;background:#2563eb;color:#fff;padding:4px 7px;border-radius:999px;letter-spacing:.02em;white-space:nowrap}
+.syllabus-group{margin:0 0 10px;padding:5px 0 8px;border-bottom:1px solid rgba(100,116,139,.16)}
+.syllabus-part{font-weight:900!important;color:#1d4ed8!important;background:rgba(37,99,235,.08);border-radius:8px;margin:2px 0 4px;padding:8px 10px!important}
+.syllabus-topic{font-size:.77rem!important;padding:5px 8px 5px 10px!important;color:#475569!important;display:flex!important;align-items:center;gap:7px}
+.syllabus-topic span{min-width:24px;height:22px;display:inline-grid;place-items:center;border-radius:6px;background:#f1f5f9;color:#64748b;font-size:.66rem;font-weight:800}
+.syllabus-topic:hover{color:#1d4ed8!important;background:#eff6ff}
+.syllabus-topic:hover span{background:#dbeafe;color:#1d4ed8}
+@media (prefers-color-scheme:dark){.syllabus-title{background:#172554;border-color:#1e40af;color:#bfdbfe}.syllabus-part{color:#93c5fd!important;background:rgba(59,130,246,.12)}.syllabus-topic{color:#cbd5e1!important}.syllabus-topic span{background:#1e293b;color:#94a3b8}.syllabus-topic:hover{color:#bfdbfe!important;background:#172554}.syllabus-topic:hover span{background:#1e3a8a;color:#bfdbfe}}
 
-<div class="connect"><b>Connect to everyday life:</b> Imagine giving a friend instructions to make tea. “Make tea” is not enough. You would need steps such as boil water, add tea, add milk, add sugar and serve. A program works in a similar way: a problem is converted into precise steps.</div>
+/* Natural learning journey — the four-stage teaching flow is visual, not labelled */
+.learning-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 18px;padding:8px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,rgba(55,118,171,.055),rgba(255,211,67,.08));}
+.learning-step{position:relative;display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:11px;background:var(--card);border:1px solid var(--line);font-size:.82rem;font-weight:700;color:var(--muted);transition:.2s ease;}
+.learning-step b{display:grid;place-items:center;min-width:25px;height:25px;border-radius:50%;background:var(--accent);color:#fff;font-size:.72rem;}
+.learning-step:nth-child(2) b{background:#5b7c99}.learning-step:nth-child(3) b{background:#d49a00}.learning-step:nth-child(4) b{background:#16834d}
+.learning-step:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 7px 16px rgba(20,30,50,.08);color:var(--text)}
+@media(max-width:760px){.learning-flow{grid-template-columns:1fr 1fr}.learning-step{font-size:.76rem}}
+@media(max-width:430px){.learning-flow{grid-template-columns:1fr}.learning-step{padding:8px}}
 
-<h3>The Python programming language</h3>
-<p><b>Python</b> is a high-level, general-purpose programming language known for readable syntax. It can be used for automation, web applications, data analysis, artificial intelligence, scientific computing and education.</p>
-<p>When we write Python code, the <b>Python interpreter</b> reads the instructions and executes them.</p>
-<pre><code>print("Hello, Python!")</code></pre>
-<div class="observe"><b>Observe:</b> <code>print()</code> is a built-in function. The text inside quotation marks is a string value. Python executes the statement and displays the text.</div>
+/* Natural teaching flow: question → concept → example → output */
+.think-question{margin:18px 0 10px;padding:16px 18px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;background:var(--soft);box-shadow:0 5px 18px rgba(15,23,42,.05)}
+.think-question span,.concept-note span,.example-label{display:block;font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+.think-question strong{display:block;font-size:1.02rem;line-height:1.5;color:var(--text)}
+.concept-note{margin:4px 0 8px;font-size:.8rem}
+.example-label{margin:14px 0 7px}
+@media(max-width:700px){.think-question{padding:13px 14px}.think-question strong{font-size:.96rem}}
 
-<h3>What is a program?</h3>
-<p>A <b>program</b> is a sequence of instructions written to perform a task or solve a problem.</p>
-<div class="concept-grid">
-<div><b>Input</b><p>Data supplied to a program.</p><code>age = 20</code></div>
-<div><b>Processing</b><p>Operations performed on the data.</p><code>age + 1</code></div>
-<div><b>Output</b><p>Information produced by the program.</p><code>print(age)</code></div>
+.topic-question{margin:4px 0 16px;padding:14px 17px;border:1px solid #dbe5ff;border-left:4px solid var(--accent);background:linear-gradient(90deg,#f5f8ff,#ffffff);border-radius:12px;color:#172554;font-size:16px;line-height:1.55;box-shadow:0 5px 18px rgba(37,99,235,.06)}
+.topic-question strong{font-weight:800}
+body.dark .topic-question{background:linear-gradient(90deg,#101b31,#111827);border-color:#263d67;color:#dbeafe}
+.topic-main>.desc{margin-top:0}
+</style></head><body><div class="progress" id="progress"></div>
+<header><div class="top"><a class="brand" href="#top">Python <span>Module 1</span></a><div class="search"><input id="search" oninput="filterTopics()" placeholder="Search topics, loops, functions..."/></div><button class="theme" onclick="toggleTheme()">☾</button></div></header>
+<div class="layout"><aside class="course-sidebar">
+<div class="side-module">
+<div class="side-kicker">MODULE 1</div>
+<div class="side-title">Python Programming</div>
+<div class="side-subtitle">Fundamentals</div>
 </div>
-
-<h3>What is debugging?</h3>
-<p>Even experienced programmers write programs containing errors. <b>Debugging</b> is the systematic process of locating, understanding and correcting those errors.</p>
-<div class="flow"><span>Observe the problem</span><i>→</i><span>Find evidence</span><i>→</i><span>Form a hypothesis</span><i>→</i><span>Change</span><i>→</i><span>Run again</span><i>→</i><span>Verify</span></div>
-
-<h3>Three important types of errors</h3>
-<div class="error-grid">
-<div><h4>❌ Syntax Error</h4><p>The program violates Python's grammar rules, so Python cannot understand the instruction.</p><pre><code>print("Hello"</code></pre><p><b>Fix:</b> complete the parentheses.</p></div>
-<div><h4>💥 Runtime Error</h4><p>The program starts running but encounters a problem during execution.</p><pre><code>number = 10
-print(number / 0)</code></pre><p><b>Fix:</b> prevent division by zero.</p></div>
-<div><h4>🤔 Semantic Error</h4><p>The program runs but does not produce the intended result. The instructions are syntactically valid but logically wrong.</p><pre><code>length = 10
+<nav aria-label="Module navigation" class="side-nav">
+<a class="side-home active" href="#top"><span class="side-icon">⌂</span><span>Home</span></a>
+<div class="side-section">
+<a class="side-part" href="#part-A"><span>PART A</span><small>The Way of the Program</small></a>
+<a class="side-topic" href="#topic-1"><b>01</b><span>The Python Programming Language</span></a>
+<a class="side-topic" href="#topic-2"><b>02</b><span>What is a Program?</span></a>
+<a class="side-topic" href="#topic-3"><b>03</b><span>What is Debugging?</span></a>
+<a class="side-topic" href="#topic-4"><b>04</b><span>Syntax Errors</span></a>
+<a class="side-topic" href="#topic-5"><b>05</b><span>Runtime Errors</span></a>
+<a class="side-topic" href="#topic-6"><b>06</b><span>Semantic Errors</span></a>
+<a class="side-topic" href="#topic-7"><b>07</b><span>Experimental Debugging</span></a>
+</div>
+<div class="side-section">
+<a class="side-part" href="#part-B"><span>PART B</span><small>Variables, Expressions &amp; Statements</small></a>
+<a class="side-topic" href="#topic-8"><b>08</b><span>Values and Data Types</span></a>
+<a class="side-topic" href="#topic-9"><b>09</b><span>Variables</span></a>
+<a class="side-topic" href="#topic-10"><b>10</b><span>Variable Names and Keywords</span></a>
+<a class="side-topic" href="#topic-11"><b>11</b><span>Statements</span></a>
+<a class="side-topic" href="#topic-12"><b>12</b><span>Evaluating Expressions</span></a>
+<a class="side-topic" href="#topic-13"><b>13</b><span>Operators and Operands</span></a>
+<a class="side-topic" href="#topic-14"><b>14</b><span>Type Converter Functions</span></a>
+<a class="side-topic" href="#topic-15"><b>15</b><span>Order of Operations</span></a>
+<a class="side-topic" href="#topic-16"><b>16</b><span>Operations on Strings</span></a>
+<a class="side-topic" href="#topic-17"><b>17</b><span>Input</span></a>
+<a class="side-topic" href="#topic-18"><b>18</b><span>Composition</span></a>
+<a class="side-topic" href="#topic-19"><b>19</b><span>The Modulus Operator</span></a>
+</div>
+<div class="side-section">
+<a class="side-part" href="#part-C"><span>PART C</span><small>Iteration</small></a>
+<a class="side-topic" href="#topic-20"><b>20</b><span>Assignment</span></a>
+<a class="side-topic" href="#topic-21"><b>21</b><span>Updating Variables</span></a>
+<a class="side-topic" href="#topic-22"><b>22</b><span>The for Loop</span></a>
+<a class="side-topic" href="#topic-23"><b>23</b><span>The while Statement</span></a>
+<a class="side-topic" href="#topic-24"><b>24</b><span>The Collatz 3n + 1 Sequence</span></a>
+<a class="side-topic" href="#topic-25"><b>25</b><span>Tables</span></a>
+<a class="side-topic" href="#topic-26"><b>26</b><span>Two-Dimensional Tables</span></a>
+<a class="side-topic" href="#topic-27"><b>27</b><span>break Statement</span></a>
+<a class="side-topic" href="#topic-28"><b>28</b><span>continue Statement</span></a>
+<a class="side-topic" href="#topic-29"><b>29</b><span>Paired Data</span></a>
+<a class="side-topic" href="#topic-30"><b>30</b><span>Nested Loops for Nested Data</span></a>
+</div>
+<div class="side-section">
+<a class="side-part" href="#part-D"><span>PART D</span><small>Functions</small></a>
+<a class="side-topic" href="#topic-31"><b>31</b><span>Functions with Arguments</span></a>
+<a class="side-topic" href="#topic-32"><b>32</b><span>Return Values</span></a>
+</div>
+<div class="side-tools">
+<a href="#practice"><span>🧪</span> Practice</a>
+<a href="#assessment"><span>🎯</span> Quiz · 10 Marks</a>
+<a href="#assessment"><span>📝</span> Assignment · 20 Marks</a>
+<a href="#assessment"><span>🏆</span> Formative Assessment</a>
+</div>
+</nav>
+</aside><main id="top"><section class="hero"><span class="eyebrow">1BPLC105B / 205B · Python Programming</span><h1>The Way of the Program</h1><p>Interactive Module 1 learning notes covering the complete requested syllabus: programming fundamentals, variables and expressions, iteration, and functions.</p><div class="author-credit"><strong>Prepared by</strong><br/><span>Prof. Kiran Mudaraddi</span></div><div class="meta"><span class="pill">32 core topics</span><span class="pill">Python Programming · Module 1</span><span class="pill">GitHub Pages ready</span></div></section>
+<div class="content"><div class="box" style="margin-bottom:30px"><h3 style="margin-top:0">How to use this module</h3><p>Read each topic, run or copy the Python example, inspect the expected output, and answer the quick check. Use the search box to jump directly to a topic.</p></div>
+<section class="part" id="part-A"><div class="part-label">PART A</div><h2>The Way of the Program</h2><p class="part-intro"></p></section><article class="topic" id="topic-1"><div class="topic-num">1</div><div class="topic-main"><h3>The Python Programming Language</h3><div class="topic-question"><strong>How does Python turn instructions into actions that a computer can perform?</strong></div><p class="desc">Python is a high-level, user-friendly programming language. It is designed to be easy to read and write and is used for calculation, decision-making and data processing.</p><div class="diagram"><div class="diagram-title">How a Program Works</div><div class="flow"><div class="node">Input</div><div class="arrow">→</div><div class="node process">Process</div><div class="arrow">→</div><div class="node decision"> <span>Decision /<br/>Repetition</span></div><div class="arrow">→</div><div class="node">Output</div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>print("Hello, Python!")
+print(2 + 3)</code></pre><div class="output"><b>Expected output</b><pre>Hello, Python!
+5</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-2"><div class="topic-num">2</div><div class="topic-main"><h3>What is a Program?</h3><div class="topic-question"><strong>How does a program give a computer a clear sequence of instructions to solve a task?</strong></div><p class="desc">A program is a set of instructions given to a computer to perform a specific task. Every program can be viewed through input, processing, decision/repetition and output.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>name = input("Enter your name: ")
+print("Hello", name)</code></pre><div class="output"><b>Expected output</b><pre>Input → Process → Output</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-3"><div class="topic-num">3</div><div class="topic-main"><h3>What is Debugging?</h3><div class="topic-question"><strong>How does debugging help us find and correct a program that does not behave as expected?</strong></div><p class="desc">Debugging is the process of finding and fixing errors (bugs) in a program. A bug is a mistake that causes unexpected behaviour.</p><div class="diagram"><div class="diagram-title">From Problem to Python Code</div><div class="flow"><div class="node">Problem</div><div class="arrow">→</div><div class="node">Algorithm</div><div class="arrow">→</div><div class="node">Flowchart</div><div class="arrow">→</div><div class="node">Pseudocode</div><div class="arrow">→</div><div class="node">Python Code</div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>x = 10
+y = 0
+# Try the program, observe the error, then identify the cause.
+print(x / y)</code></pre><div class="output"><b>Expected output</b><pre>The program stops with a runtime error.</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-4"><div class="topic-num">4</div><div class="topic-main"><h3>Syntax Errors</h3><div class="topic-question"><strong>How does Python detect a syntax error before a program can run?</strong></div><p class="desc">A syntax error occurs when Python cannot understand the code because the grammar rules of the language have been broken. Python stops before normal execution.</p><div class="diagram"><div class="diagram-title">How Python Code Runs</div><div class="flow"><div class="node">Source Code<br/><small>program.py</small></div><div class="arrow">→</div><div class="node">Bytecode<br/><small>.pyc</small></div><div class="arrow">→</div><div class="node">Python Virtual Machine<br/><small>PVM</small></div><div class="arrow">→</div><div class="node">Output</div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>print("Hello"
+# Missing closing parenthesis</code></pre><div class="output"><b>Expected output</b><pre>SyntaxError</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-5"><div class="topic-num">5</div><div class="topic-main"><h3>Runtime Errors</h3><div class="topic-question"><strong>How does a runtime error occur while a Python program is running?</strong></div><p class="desc">A runtime error occurs while the program is running. Runtime errors are also called exceptions.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>a = 5
+b = 0
+print(a / b)</code></pre><div class="output"><b>Expected output</b><pre>ZeroDivisionError</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-6"><div class="topic-num">6</div><div class="topic-main"><h3>Semantic Errors</h3><div class="topic-question"><strong>How does a semantic error produce the wrong result even when the program runs successfully?</strong></div><p class="desc">A semantic error occurs when a program runs but produces the wrong result because the logic is flawed. No error message may appear.</p><div class="diagram"><div class="diagram-title">Three Common Error Types</div><div class="flow"><div class="node">Syntax Error<br/><small>grammar / structure</small></div><div class="arrow">→</div><div class="node">Runtime Error<br/><small>during execution</small></div><div class="arrow">→</div><div class="node">Semantic Error<br/><small>wrong logic / output</small></div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>length = 10
 width = 5
-area = length + width</code></pre><p><b>Fix:</b> use the correct formula for area.</p></div>
-</div>
-
-<h3>Experimental debugging</h3>
-<p>Experimental debugging means treating debugging like an investigation. Instead of changing many lines at once, change one small part, run the program, and use the result as evidence.</p>
-<div class="debug-steps">
-<div><b>1. Observe</b><span>What is wrong?</span></div><div><b>2. Identify</b><span>Where might it happen?</span></div><div><b>3. Hypothesize</b><span>What could be causing it?</span></div><div><b>4. Change</b><span>Make one small change.</span></div><div><b>5. Run</b><span>Test again.</span></div><div><b>6. Explain</b><span>Did the evidence support the idea?</span></div>
-</div>
-<div class="try"><b>Try:</b> Write a program with one intentional error. Before fixing it, read the error message and describe what Python is telling you.</div>
-<div class="takeaway"><b>Takeaway:</b> A good programmer does not merely fix errors. A good programmer learns from the evidence produced by the program.</div>
-</section>
-
-<section id="variables" class="lesson">
-<div class="tag">02 · VARIABLES, EXPRESSIONS & STATEMENTS</div>
-<h2>Give names to information</h2>
-<p>Programs work with information. Python represents that information as <b>values</b>. Variables give useful names to values so that we can use them later.</p>
-
-<h3>Values and data types</h3>
-<table><tr><th>Type</th><th>Example</th><th>Used for</th></tr>
-<tr><td><code>int</code></td><td><code>25</code></td><td>Whole numbers</td></tr>
-<tr><td><code>float</code></td><td><code>3.14</code></td><td>Decimal numbers</td></tr>
-<tr><td><code>str</code></td><td><code>"Python"</code></td><td>Text</td></tr>
-<tr><td><code>bool</code></td><td><code>True</code></td><td>True/false decisions</td></tr>
-</table>
-<pre><code>name = "Asha"
-age = 20
-cgpa = 8.4
-passed = True
-
-print(name)
-print(age)
-print(cgpa)
-print(passed)</code></pre>
-
-<h3>Variables</h3>
-<p>A variable is a name that refers to a value. The statement below assigns the value <code>25</code> to the variable <code>age</code>.</p>
-<pre><code>age = 25</code></pre>
-<p>Think of <code>age</code> as a label attached to a value. The assignment operator <code>=</code> means “store/refer to this value with this name”; it is not the same as mathematical equality.</p>
-
-<h3>Variable names and keywords</h3>
-<p>Use meaningful names. Names may contain letters, digits and underscores, but they cannot begin with a digit. Python keywords have special meanings and cannot be used as ordinary variable names.</p>
-<pre><code>student_name = "Ravi"   # good
-total_marks = 85        # good
-
-# 2marks = 20           # invalid
-# class = "CSE"         # invalid: keyword</code></pre>
-
-<h3>Statements and expressions</h3>
-<p>A <b>statement</b> is an instruction that Python can execute. An <b>expression</b> is a combination of values, variables and operators that produces a value.</p>
-<pre><code>x = 10 + 5       # statement containing an expression
-result = x * 2    # statement
-print(result)     # statement</code></pre>
-
-<h3>Operators and operands</h3>
-<pre><code>a = 10
+area = length + width   # logic error
+print("Area:", area)</code></pre><div class="output"><b>Expected output</b><pre>Area: 15  (wrong result)</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-7"><div class="topic-num">7</div><div class="topic-main"><h3>Experimental Debugging</h3><div class="topic-question"><strong>How does experimental debugging help us test an idea about the cause of an error?</strong></div><p class="desc">Experimental debugging resembles the scientific method: form a hypothesis about the cause, change a small part, run the program again, and check whether the result supports the hypothesis.</p><div class="diagram"><div class="diagram-title">Experimental Debugging Cycle</div><div class="cycle"><div class="mini"><b>1. Observe</b>See the error or unexpected output.</div><div class="mini"><b>2. Hypothesize</b>Identify a possible cause.</div><div class="mini"><b>3. Change</b>Modify a small part.</div><div class="mini"><b>4. Run</b>Execute the program again.</div><div class="mini"><b>5. Check</b>Compare the result with the hypothesis.</div><div class="mini"><b>6. Repeat</b>Continue until the behavior is correct.</div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>value = 5
+print("Before:", value)
+value = value * 2
+print("After:", value)</code></pre><div class="output"><b>Expected output</b><pre>Before: 5
+After: 10</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><section class="part" id="part-B"><div class="part-label">PART B</div><h2>Variables, Expressions and Statements</h2><p class="part-intro"></p></section><article class="topic" id="topic-8"><div class="topic-num">8</div><div class="topic-main"><h3>Values and Data Types</h3><div class="topic-question"><strong>How does Python represent different kinds of values such as numbers, text, and Boolean values?</strong></div><p class="desc">A value is a basic piece of data that a program manipulates. Common values in this module include integers, floating-point numbers and strings.</p><div class="diagram"><div class="diagram-title">Values and Data Types</div><div class="varbox"><div class="memory"><b>17</b><br/><small>int</small></div><div class="memory"><b>20.9</b><br/><small>float</small></div><div class="memory"><b>"welcome"</b><br/><small>str</small></div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>print(type(17))
+print(type("Hello"))
+print(type(3.2))</code></pre><div class="output"><b>Expected output</b><pre>&lt;class 'int'&gt;
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-9"><div class="topic-num">9</div><div class="topic-main"><h3>Variables</h3><div class="topic-question"><strong>How does a variable connect a meaningful name with a value in a Python program?</strong></div><p class="desc">A variable is a name that stores a value, allowing a program to remember and reuse data. Python is dynamically typed, so a variable can refer to values of different types during execution.</p><div class="diagram"><div class="diagram-title">Variable as a Labelled Container</div><div class="varbox"><div class="memory"><b>n</b><br/><small>variable name</small></div><div class="pointer">→</div><div class="memory"><b>17</b><br/><small>value in memory</small></div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>message = "Hello World"
+n = 17
+pi = 3.14159
+print(message, n, pi)</code></pre><div class="output"><b>Expected output</b><pre>Hello World 17 3.14159</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-10"><div class="topic-num">10</div><div class="topic-main"><h3>Variable Names and Keywords</h3><div class="topic-question"><strong>How does Python decide whether a name can be used as a variable name or is reserved as a keyword?</strong></div><p class="desc">Variable names may contain letters, digits and underscore; they must not start with a digit, are case-sensitive, cannot use special characters such as $, #, @, * and cannot be Python keywords.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>student_marks = 85
+Student_marks = 90
+print(student_marks)
+print(Student_marks)</code></pre><div class="output"><b>Expected output</b><pre>85
+90</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-11"><div class="topic-num">11</div><div class="topic-main"><h3>Statements</h3><div class="topic-question"><strong>How does a statement tell Python to perform an action?</strong></div><p class="desc">A statement is an instruction that the Python interpreter can execute. Assignment, conditional and loop statements are examples.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>x = 10
+if x &gt; 0:
+    print("positive")</code></pre><div class="output"><b>Expected output</b><pre>positive</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-12"><div class="topic-num">12</div><div class="topic-main"><h3>Evaluating Expressions</h3><div class="topic-question"><strong>How does Python evaluate an expression to produce a value?</strong></div><p class="desc">An expression is a combination of values, variables, operators and functions that produces a result. Evaluating an expression always produces a value.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>print(1 + 1)
+print(len("Hello"))</code></pre><div class="output"><b>Expected output</b><pre>2
+5</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-13"><div class="topic-num">13</div><div class="topic-main"><h3>Operators and Operands</h3><div class="topic-question"><strong>How do operators work with operands to produce a result?</strong></div><p class="desc">Operators are special tokens representing computations. Operands are the values on which an operator acts.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>a = 10
 b = 3
-
-print(a + b)   # addition
-print(a - b)   # subtraction
-print(a * b)   # multiplication
-print(a / b)   # division
-print(a // b)  # floor division
-print(a % b)   # remainder
-print(a ** b)  # power</code></pre>
-<p>In <code>a + b</code>, <code>a</code> and <code>b</code> are operands and <code>+</code> is the operator.</p>
-
-<h3>Type converter functions</h3>
-<p>User input normally arrives as text. Conversion functions allow us to convert values to another type.</p>
-<pre><code>age = int("20")
-price = float("99.50")
-code = str(2026)
-
-print(age + 1)
-print(price + 10)
-print(code)</code></pre>
-
-<h3>Order of operations</h3>
-<p>When an expression contains several operators, Python follows precedence rules. Parentheses have the highest priority among these common arithmetic operations.</p>
-<pre><code>print(10 + 2 * 3)       # multiplication first
-print((10 + 2) * 3)     # parentheses first</code></pre>
-<div class="predict"><b>Predict:</b> Before running these two statements, write their results. Then run them and explain the difference.</div>
-
-<div class="takeaway"><b>Takeaway:</b> Variables store useful information, expressions calculate values, and statements tell Python what to do.</div>
-</section>
-
-<section id="strings" class="lesson">
-<div class="tag">03 · STRINGS, INPUT & COMPOSITION</div>
-<h2>Make programs communicate</h2>
-<p>A <b>string</b> is a sequence of characters. Strings are used for names, messages, labels, sentences and many other kinds of text.</p>
-
-<h3>Creating strings</h3>
-<pre><code>name = "Kiran"
-course = 'Python Programming'</code></pre>
-
-<h3>Operations on strings</h3>
-<pre><code>first = "Python"
-second = "Programming"
-
-print(first + " " + second)  # concatenation
-print("Hi! " * 3)            # repetition
-print(len(first))            # length
-print(first[0])              # indexing
-print(first[0:3])            # slicing</code></pre>
-<p><b>Concatenation</b> joins strings. <b>Indexing</b> accesses a character. <b>Slicing</b> extracts a portion of a string.</p>
-
-<h3>Input</h3>
-<p>The <code>input()</code> function pauses the program and waits for the user to enter data. The returned value is a string.</p>
-<pre><code>name = input("Enter your name: ")
-print("Hello", name)</code></pre>
-
-<h3>Input with numbers</h3>
-<pre><code>age = int(input("Enter your age: "))
-next_year = age + 1
-print("Next year:", next_year)</code></pre>
-<div class="observe"><b>Observe:</b> Without <code>int()</code>, the value from <code>input()</code> would be text. Converting it allows arithmetic.</div>
-
-<h3>Composition</h3>
-<p><b>Composition</b> means combining simple operations to create a larger solution. For example, input + conversion + calculation + output can form a complete program.</p>
-<pre><code>length = float(input("Length: "))
-width = float(input("Width: "))
-
-area = length * width
-
-print("Area =", area)</code></pre>
-
-<h3>The modulus operator</h3>
-<p>The modulus operator <code>%</code> gives the remainder after division.</p>
-<pre><code>print(17 % 5)   # 2
-print(20 % 4)   # 0</code></pre>
-<p>It is useful for checking even/odd numbers, repeating patterns, cycles and divisibility.</p>
-<pre><code>n = int(input("Enter a number: "))
-
-if n % 2 == 0:
-    print("Even")
-else:
-    print("Odd")</code></pre>
-
-<div class="try"><b>Try:</b> Build a small program that asks for two numbers and displays their sum, difference, product and remainder.</div>
-</section>
-
-<section id="iteration" class="lesson">
-<div class="tag">04 · ITERATION</div>
-<h2>Teach the computer to repeat</h2>
-<p>Many programming tasks contain repetition: printing numbers, processing marks, generating tables or checking each item in a collection. <b>Iteration</b> allows a program to repeat instructions efficiently.</p>
-
-<h3>Assignment and updating variables</h3>
-<pre><code>count = 0
-count = count + 1
-count += 1
-print(count)</code></pre>
-<p>The value of a variable can change during program execution. This is called <b>updating</b> the variable.</p>
-
-<h3>The for loop</h3>
-<p>A <code>for</code> loop is useful when we want to repeat an action for each value in a sequence or range.</p>
-<pre><code>for i in range(1, 6):
-    print(i)</code></pre>
-<p><code>range(1, 6)</code> generates 1, 2, 3, 4 and 5. The stopping value 6 is not included.</p>
-<div class="predict"><b>Predict:</b> How many times will the body execute? What is the final value printed?</div>
-
-<h3>The while statement</h3>
-<p>A <code>while</code> loop continues as long as its condition is true. The programmer must ensure that the condition eventually becomes false.</p>
-<pre><code>n = 1
-
-while n <= 5:
-    print(n)
-    n += 1</code></pre>
-<div class="warning"><b>Watch out:</b> If you forget to update <code>n</code>, the condition may remain true forever and create an infinite loop.</div>
-
-<h3>The Collatz 3n + 1 sequence</h3>
-<p>For a positive integer <code>n</code>: if it is even, divide it by 2; if it is odd, multiply it by 3 and add 1. Continue until reaching 1.</p>
-<pre><code>n = 6
-
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a // b)
+print(a ** b)</code></pre><div class="output"><b>Expected output</b><pre>13
+7
+30
+3.333...
+3
+1000</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-14"><div class="topic-num">14</div><div class="topic-main"><h3>Type Converter Functions</h3><div class="topic-question"><strong>How do type converter functions change a value from one data type to another?</strong></div><p class="desc">Type converters change a value from one type to another when the conversion is valid. The module uses int() and float() especially with input().</p><div class="diagram"><div class="diagram-title">Operator and Operands</div><div class="flow"><div class="node">5<br/><small>operand</small></div><div class="node process">+<br/><small>operator</small></div><div class="node">3<br/><small>operand</small></div><div class="arrow">→</div><div class="node">8<br/><small>result</small></div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>print(int(3.14))
+print(int("2346"))
+print(float("3.5"))</code></pre><div class="output"><b>Expected output</b><pre>3
+2346
+3.5</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-15"><div class="topic-num">15</div><div class="topic-main"><h3>Order of Operations</h3><div class="topic-question"><strong>How does the order of operations determine which part of an expression Python evaluates first?</strong></div><p class="desc">Python follows operator precedence. Parentheses can force the order. Arithmetic expressions follow the familiar PEMDAS-style ordering; exponentiation is right-associative.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>print(5 + 4 * 3)
+print((5 + 4) * 3)
+print(5 + 4 ** 2)
+print(2 ** 3 ** 2)</code></pre><div class="output"><b>Expected output</b><pre>17
+27
+21
+512</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-16"><div class="topic-num">16</div><div class="topic-main"><h3>Operations on Strings</h3><div class="topic-question"><strong>How does Python let us combine, repeat, compare, and access characters in strings?</strong></div><p class="desc">Strings support operations such as concatenation with + and repetition with *. Arithmetic mixing between strings and numbers is not valid without conversion.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>fruit = "banana"
+baked_good = "nut bread"
+print(fruit + baked_good)
+print("fun" * 3)</code></pre><div class="output"><b>Expected output</b><pre>banananut bread
+funfunfun</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-17"><div class="topic-num">17</div><div class="topic-main"><h3>Input</h3><div class="topic-question"><strong>How does input() bring information from the user into a Python program?</strong></div><p class="desc">input() gets input from the user and always returns a string.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>name = input("Enter your name: ")
+print("Hello", name)</code></pre><div class="output"><b>Expected output</b><pre>Enter your name: Rahul
+Hello Rahul</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-18"><div class="topic-num">18</div><div class="topic-main"><h3>Composition</h3><div class="topic-question"><strong>How does composition help us build a larger expression from smaller expressions and values?</strong></div><p class="desc">Composition means taking small building blocks and combining them into larger chunks. Python expressions can be built step by step or composed in a single line.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>r = float(input("What is your radius? "))
+print("Area is", 3.14159 * r ** 2)</code></pre><div class="output"><b>Expected output</b><pre>Area is ...</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-19"><div class="topic-num">19</div><div class="topic-main"><h3>The Modulus Operator</h3><div class="topic-question"><strong>How does the modulus operator help us find a remainder and solve practical problems?</strong></div><p class="desc">% gives the remainder after division. It is useful for checking divisibility, finding digits and converting time.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>print(7 % 3)
+print(10 % 2)
+print(17 % 10)</code></pre><div class="output"><b>Expected output</b><pre>1
+0
+7</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><section class="part" id="part-C"><div class="part-label">PART C</div><h2>Iteration</h2><p class="part-intro"></p></section><article class="topic" id="topic-20"><div class="topic-num">20</div><div class="topic-main"><h3>Assignment</h3><div class="topic-question"><strong>How does assignment give a variable its value?</strong></div><p class="desc">Assignment stores a value in a variable using =. It is different from equality testing, which uses ==.</p><div class="diagram"><div class="diagram-title">Choosing <code>for</code> or <code>while</code></div><div class="loopbox"><div class="mini"><b>for loop</b>Use when the sequence or number of repetitions is known.</div><div class="mini"><b>while loop</b>Use when repetition depends on a condition.</div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>num = 15
+print(num)
+a = 7
+print(a == 7)</code></pre><div class="output"><b>Expected output</b><pre>15
+True</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-21"><div class="topic-num">21</div><div class="topic-main"><h3>Updating Variables</h3><div class="topic-question"><strong>How does updating a variable allow a program to keep track of changing information?</strong></div><p class="desc">A variable can use its old value to compute a new value. Shorthand operators such as += and -= provide compact updates.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>n = 5
+n = 3 * n + 1
+print(n)
+x = 10
+x += 1
+print(x)</code></pre><div class="output"><b>Expected output</b><pre>16
+11</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-22"><div class="topic-num">22</div><div class="topic-main"><h3>The for Loop</h3><div class="topic-question"><strong>How does a for loop repeat a set of statements for each value in a sequence?</strong></div><p class="desc">The for loop traverses each item in a sequence and is ideal for definite iteration when the number of repetitions is known.</p><div class="diagram"><div class="diagram-title">Collatz 3n + 1 Sequence — n = 12</div><div class="flow"><div class="node">12</div><div class="arrow">→</div><div class="node">6</div><div class="arrow">→</div><div class="node">3</div><div class="arrow">→</div><div class="node">10</div><div class="arrow">→</div><div class="node">5</div><div class="arrow">→</div><div class="node">16</div><div class="arrow">→</div><div class="node">8</div><div class="arrow">→</div><div class="node">4</div><div class="arrow">→</div><div class="node">2</div><div class="arrow">→</div><div class="node">1</div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>numbers = [10, 20, 30, 40, 50]
+total = 0
+for num in numbers:
+    total += num
+print(total)</code></pre><div class="output"><b>Expected output</b><pre>150</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-23"><div class="topic-num">23</div><div class="topic-main"><h3>The while Statement</h3><div class="topic-question"><strong>How does a while statement keep repeating until its condition becomes false?</strong></div><p class="desc">The while statement is used for indefinite iteration. It repeats while a condition is true and requires a loop-control update so the condition can eventually become false.</p><div class="diagram"><div class="diagram-title">Nested Loop / Two-Dimensional Table</div><div class="matrix"><span>1 × 1</span><span>1 × 2</span><span>1 × 3</span><span>1 × 4</span><span>2 × 1</span><span>2 × 2</span><span>2 × 3</span><span>2 × 4</span><span>3 × 1</span><span>3 × 2</span><span>3 × 3</span><span>3 × 4</span></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>n = 6
+sum = 0
+i = 0
+while i &lt;= n:
+    sum += i
+    i += 1
+print("Sum is", sum)</code></pre><div class="output"><b>Expected output</b><pre>Sum is 21</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-24"><div class="topic-num">24</div><div class="topic-main"><h3>The Collatz 3n + 1 Sequence</h3><div class="topic-question"><strong>How does the Collatz rule use repetition and decisions to transform a number until it reaches 1?</strong></div><p class="desc">Start with a positive integer n. If n is even, replace it with n//2; if n is odd, replace it with 3*n+1. Repeat until n reaches 1.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>n = 12
+steps = 0
 while n != 1:
-    print(n)
-
+    print(n, end=", ")
     if n % 2 == 0:
         n = n // 2
     else:
         n = 3 * n + 1
-
-print(1)</code></pre>
-<p>This example combines <b>variables, modulus, selection, integer division and iteration</b>.</p>
-
-<h3>Tables</h3>
-<pre><code>number = 5
-
-for i in range(1, 11):
-    print(number, "x", i, "=", number * i)</code></pre>
-
-<h3>Two-dimensional tables</h3>
-<p>When data has rows and columns, nested loops are often useful.</p>
-<pre><code>for row in range(1, 4):
+    steps += 1
+print(n)
+print("Total steps:", steps)</code></pre><div class="output"><b>Expected output</b><pre>12, 6, 3, 10, 5, 16, 8, 4, 2, 1
+Total steps: 9</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-25"><div class="topic-num">25</div><div class="topic-main"><h3>Tables</h3><div class="topic-question"><strong>How does a loop generate a complete table without writing each line separately?</strong></div><p class="desc">Loops can systematically generate tables. The notes use loops to generate powers and multiplication-related sequences.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>for x in range(13):
+    print(x, "\t", 2 ** x)</code></pre><div class="output"><b>Expected output</b><pre>0 1
+1 2
+2 4
+...
+12 4096</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-26"><div class="topic-num">26</div><div class="topic-main"><h3>Two-Dimensional Tables</h3><div class="topic-question"><strong>How do nested loops build a two-dimensional table using rows and columns?</strong></div><p class="desc">Nested loops can generate data arranged by rows and columns. The inner loop completes the work for each outer-loop item.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>for row in range(1, 4):
     for col in range(1, 5):
-        print(row * col, end=" ")
-    print()</code></pre>
-<p>The outer loop controls the rows. The inner loop completes all columns for the current row.</p>
-
-<h3>break statement</h3>
-<p><code>break</code> immediately terminates the nearest loop.</p>
-<pre><code>for n in range(1, 11):
-    if n == 6:
+        print(row * col, end="\t")
+    print()</code></pre><div class="output"><b>Expected output</b><pre>1 2 3 4
+2 4 6 8
+3 6 9 12</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-27"><div class="topic-num">27</div><div class="topic-main"><h3>break Statement</h3><div class="topic-question"><strong>How does break change the normal flow of a loop when a desired condition is reached?</strong></div><p class="desc">break immediately exits the loop, even if the loop would otherwise continue.</p><div class="diagram"><div class="diagram-title">Paired Data and Nested Data</div><div class="fnflow"><div class="node">Student</div><div class="arrow">→</div><div class="node">(Name, Subjects)</div><div class="arrow">→</div><div class="node">Inner loop<br/>checks subjects</div><div class="arrow">→</div><div class="node">Count / Output</div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>for i in [12, 14, 17, 22, 19]:
+    if i % 2 == 1:
         break
-    print(n)</code></pre>
-
-<h3>continue statement</h3>
-<p><code>continue</code> skips the remaining statements in the current iteration and moves to the next iteration.</p>
-<pre><code>for n in range(1, 6):
-    if n == 3:
+    print(i)
+print("done")</code></pre><div class="output"><b>Expected output</b><pre>12
+14
+done</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-28"><div class="topic-num">28</div><div class="topic-main"><h3>continue Statement</h3><div class="topic-question"><strong>How does continue skip the current iteration and move directly to the next one?</strong></div><p class="desc">continue skips the rest of the current iteration and moves to the next iteration.</p><div class="diagram"><div class="diagram-title">Function: Arguments → Processing → Return Value</div><div class="fnflow"><div class="node">Arguments<br/><small>20, 20, 18</small></div><div class="arrow">→</div><div class="node process">Function<br/><small>find_average()</small></div><div class="arrow">→</div><div class="node">Return Value<br/><small>19.33...</small></div></div></div><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>for i in [12, 16, 17, 24, 29, 30]:
+    if i % 2 == 1:
         continue
-    print(n)</code></pre>
+    print(i)</code></pre><div class="output"><b>Expected output</b><pre>12
+16
+24
+30</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-29"><div class="topic-num">29</div><div class="topic-main"><h3>Paired Data</h3><div class="topic-question"><strong>How does paired data keep related values together so they can be processed as one unit?</strong></div><p class="desc">Related information can be grouped into tuples. The notes demonstrate paired data such as a name together with a year.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>celebs = [("Amal", 1990), ("Akbar", 1993), ("Anthony", 1985)]
+for name, year in celebs:
+    if year &lt; 1990:
+        print(name)</code></pre><div class="output"><b>Expected output</b><pre>Anthony</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-30"><div class="topic-num">30</div><div class="topic-main"><h3>Nested Loops for Nested Data</h3><div class="topic-question"><strong>How do nested loops help us process data that is itself organized in nested structures?</strong></div><p class="desc">Nested loops are useful when data itself contains nested structures, such as a student paired with a list of subjects.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>students = [("John", ["CompSci", "Physics"]),
+            ("Vusi", ["Maths", "CompSci", "Stats"]),
+            ("Jess", ["CompSci", "Accounting"])]
+count = 0
+for name, subjects in students:
+    for s in subjects:
+        if s == "CompSci":
+            count += 1
+print(count)</code></pre><div class="output"><b>Expected output</b><pre>3</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><section class="part" id="part-D"><div class="part-label">PART D</div><h2>Functions</h2><p class="part-intro"></p></section><article class="topic" id="topic-31"><div class="topic-num">31</div><div class="topic-main"><h3>Functions with Arguments</h3><div class="topic-question"><strong>How do function arguments allow the same function to work with different values?</strong></div><p class="desc">A function is a named sequence of statements. Parameters are names in the function definition; arguments are the actual values passed when the function is called.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>def find_average(num1, num2, num3):
+    avg = (num1 + num2 + num3) / 3
+    return avg
 
-<h3>Paired data</h3>
-<p>Sometimes two sequences contain related information. <code>zip()</code> can pair corresponding values.</p>
-<pre><code>names = ["Asha", "Ravi", "Meena"]
-marks = [82, 74, 91]
-
-for name, mark in zip(names, marks):
-    print(name, mark)</code></pre>
-
-<h3>Nested loops for nested data</h3>
-<pre><code>data = [[1, 2], [3, 4], [5, 6]]
-
-for row in data:
-    for value in row:
-        print(value, end=" ")
-    print()</code></pre>
-
-<div class="challenge"><b>Challenge:</b> Create a 5 × 5 multiplication table using nested loops. Then modify it to print only even products.</div>
-<div class="takeaway"><b>Takeaway:</b> Use <code>for</code> when iterating through a known sequence/range, and <code>while</code> when repetition depends on a condition.</div>
-</section>
-
-<section id="functions" class="lesson">
-<div class="tag">05 · FUNCTIONS</div>
-<h2>Break a problem into reusable pieces</h2>
-<p>As programs become larger, putting everything into one long sequence makes them difficult to understand and test. A <b>function</b> groups related instructions into a named unit that can be called whenever needed.</p>
-
-<h3>Function with arguments and return value</h3>
-<pre><code>def add(a, b):
-    result = a + b
-    return result
-
-answer = add(10, 20)
-print(answer)</code></pre>
-
-<div class="concept-grid">
-<div><b>Function definition</b><p><code>def add(a, b):</code> creates the function.</p></div>
-<div><b>Arguments</b><p><code>10</code> and <code>20</code> are values passed to the function.</p></div>
-<div><b>Return value</b><p><code>return</code> sends the calculated result back to the caller.</p></div>
-</div>
-
-<h3>Why use functions?</h3>
-<ul>
-<li>Reduce repetition.</li>
-<li>Make programs easier to read.</li>
-<li>Make testing easier.</li>
-<li>Divide a large problem into smaller problems.</li>
-<li>Reuse the same logic with different inputs.</li>
-</ul>
-
-<h3>Example: square of a number</h3>
-<pre><code>def square(n):
+result = find_average(20, 20, 18)
+print(result)</code></pre><div class="output"><b>Expected output</b><pre>19.333333333333332</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article><article class="topic" id="topic-32"><div class="topic-num">32</div><div class="topic-main"><h3>Return Values</h3><div class="topic-question"><strong>How does a return value carry a result from a function back to the part of the program that called it?</strong></div><p class="desc">A return statement sends a result from a function back to the caller. A function without a return value returns None by default.</p><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>def square(n):
     return n * n
 
-print(square(5))
-print(square(12))</code></pre>
-
-<h3>Example: checking even number</h3>
-<pre><code>def is_even(n):
-    return n % 2 == 0
-
-number = int(input("Enter number: "))
-
-if is_even(number):
-    print("Even")
+answer = square(6)
+print(answer)</code></pre><div class="output"><b>Expected output</b><pre>36</pre></div></div><div class="checkpoint"><b>Try it</b><span>Change one part of the example, run it, and explain the result in your own words.</span></div></div></article>
+<section class="part" id="practice"><div class="part-label">PRACTICE</div><h2>Solved Practice Programs</h2><p class="part-intro">Additional programs from the notes that combine Module 1 concepts.</p><div class="practice-list"><details class="practice"><summary>Swap Two Variables</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+a, b = b, a
+print("After swap: a =", a, "b =", b)</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Temperature Converter</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = (celsius * 9 / 5) + 32
+print("Temperature in Fahrenheit is", fahrenheit)</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Simple Interest</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>principal = float(input("Enter principal amount: "))
+rate = float(input("Enter rate of interest (%): "))
+time = float(input("Enter time period (years): "))
+si = (principal * rate * time) / 100
+print("Simple Interest is", si)</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Leap Year</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(year, "is a Leap Year")
 else:
-    print("Odd")</code></pre>
+    print(year, "is Not a Leap Year")</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Multiplication Table</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>num = int(input("Enter a number: "))
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Star Pattern</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>rows = int(input("Enter number of rows: "))
+for i in range(1, rows + 1):
+    for j in range(i):
+        print("*", end="")
+    print()</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Factorial</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>num = int(input("Enter a number: "))
+fact = 1
+for i in range(1, num + 1):
+    fact *= i
+print("Factorial is", fact)</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Fibonacci</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>n = int(input("Enter number of terms: "))
+a, b = 0, 1
+for i in range(n):
+    print(a, end=" ")
+    a, b = b, a + b</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Prime Check</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>num = int(input("Enter a number: "))
+is_prime = True
+if num &lt; 2:
+    is_prime = False
+else:
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+print(num, "is Prime" if is_prime else "is Not Prime")</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Reverse Digits</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>num = int(input("Enter a number: "))
+reverse = 0
+temp = num
+while temp &gt; 0:
+    digit = temp % 10
+    reverse = reverse * 10 + digit
+    temp //= 10
+print("Reversed number is", reverse)</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Senior Citizen Check</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>name = input("Enter your name: ")
+birth_year = int(input("Enter your year of birth: "))
+age = 2026 - birth_year
+if age &gt;= 60:
+    print(name, "is a Senior Citizen")
+else:
+    print(name, "is not a Senior Citizen")</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Mean / Variance / Standard Deviation</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>n = int(input("Enter how many numbers: "))
+numbers = []
+for i in range(n):
+    numbers.append(float(input("Enter number: ")))
+mean = sum(numbers) / n
+squared_diff_sum = 0
+for x in numbers:
+    squared_diff_sum += (x - mean) ** 2
+variance = squared_diff_sum / n
+std_dev = variance ** 0.5
+print("Mean:", mean)
+print("Variance:", variance)
+print("Standard Deviation:", std_dev)</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Digit Frequency</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>num_str = input("Enter a multi-digit number: ")
+for digit in "0123456789":
+    count = 0
+    for ch in num_str:
+        if ch == digit:
+            count += 1
+    if count &gt; 0:
+        print("Digit", digit, "occurs", count, "time(s)")</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Armstrong Number</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>num = int(input("Enter a number: "))
+temp = num
+num_digits = len(str(num))
+total = 0
+while temp &gt; 0:
+    digit = temp % 10
+    total += digit ** num_digits
+    temp //= 10
+print(num, "is an Armstrong number" if total == num else "is not an Armstrong number")</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>GCD / HCF</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+gcd = 1
+for i in range(1, min(a, b) + 1):
+    if a % i == 0 and b % i == 0:
+        gcd = i
+print("GCD is", gcd)</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Palindrome Number</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>num = int(input("Enter a number: "))
+temp = num
+reverse = 0
+while temp &gt; 0:
+    digit = temp % 10
+    reverse = reverse * 10 + digit
+    temp //= 10
+print(num, "is a Palindrome" if reverse == num else "is Not a Palindrome")</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details><details class="practice"><summary>Menu-Driven Calculator</summary><div class="code-card"><div class="code-head"><i aria-hidden="true" class="traffic"></i><span>Python</span><button class="copy" onclick="copyCode(this)">Copy</button></div><pre><code>def calculate(n1, n2, choice):
+    if choice == 1: return n1 + n2
+    elif choice == 2: return n1 - n2
+    elif choice == 3: return n1 * n2
+    elif choice == 4: return n1 / n2
+    return None
 
-<div class="try"><b>Try:</b> Write <code>maximum(a, b)</code> that returns the larger of two numbers. Then test it with at least three pairs of values.</div>
-<div class="takeaway"><b>Takeaway:</b> Functions help us turn a large problem into small, understandable and reusable pieces.</div>
-</section>
+n1 = float(input("Enter first number: "))
+n2 = float(input("Enter second number: "))
+choice = int(input("1-Add 2-Subtract 3-Multiply 4-Divide: "))
+result = calculate(n1, n2, choice)
+print("Result is", result if result is not None else "Invalid choice")</code></pre><div class="output"><b>Expected output</b><pre>Run the program with your own input.</pre></div></div></details></div></section>
+<section class="part appendix"><div class="part-label">APPENDIX</div><h2>Quick Revision &amp; Good Practices</h2><div class="grid"><div class="box"><h4>Remember</h4><ul class="checklist"><li>Program = instructions for a task.</li><li>Debugging = finding and fixing bugs.</li><li>Syntax, runtime and semantic errors are different.</li><li>Expressions produce values.</li><li>= assigns; == compares.</li><li>for is useful for definite iteration.</li><li>while repeats while a condition is true.</li><li>break exits; continue skips.</li><li>Paired data can be grouped in tuples.</li><li>Functions can receive arguments and return values.</li></ul></div><div class="box"><h4>Do</h4><ul class="checklist"><li>Use meaningful variable and function names.</li><li>Follow snake_case.</li><li>Use comments to explain why.</li><li>Keep 4-space indentation consistent.</li><li>Break large problems into small functions.</li><li>Test edge cases.</li></ul></div><div class="box"><h4>Don't</h4><ul class="checklist"><li>Don't use vague names unnecessarily.</li><li>Don't use unexplained magic numbers.</li><li>Don't mix tabs and spaces.</li><li>Don't write overly long functions.</li><li>Don't ignore error messages.</li></ul></div></div></section></div></main></div>
+<section class="assessment-wrap" id="assessment">
+<div class="assessment-hero"><h2>Module 1 — Question Bank &amp; Quiz</h2><p>100 practice questions covering the complete Module 1 syllabus, followed by a 20-question multiple-choice quiz.</p><p><strong>Coverage:</strong> The Way of the Program · Variables, Expressions &amp; Statements · Iteration · Functions</p></div><h3 class="q-section">100 Practice Questions</h3><div class="question-bank"><div class="q-item"><span class="q-num">1.</span>What is a program?</div><div class="q-item"><span class="q-num">2.</span>What is meant by a sequence of instructions in programming?</div><div class="q-item"><span class="q-num">3.</span>List the basic building blocks of a program.</div><div class="q-item"><span class="q-num">4.</span>What is meant by input in a program?</div><div class="q-item"><span class="q-num">5.</span>What is meant by output in a program?</div><div class="q-item"><span class="q-num">6.</span>What is conditional execution?</div><div class="q-item"><span class="q-num">7.</span>What is repetition in a program?</div><div class="q-item"><span class="q-num">8.</span>What is mathematical computation? Give one example.</div><div class="q-item"><span class="q-num">9.</span>What is symbolic computation? Give one example.</div><div class="q-item"><span class="q-num">10.</span>What is a high-level programming language?</div><div class="q-item"><span class="q-num">11.</span>What is a low-level programming language?</div><div class="q-item"><span class="q-num">12.</span>How does assembly language differ from a high-level language?</div><div class="q-item"><span class="q-num">13.</span>State two advantages of high-level programming languages.</div><div class="q-item"><span class="q-num">14.</span>What are the three main problem-solving tools introduced in Module 1?</div><div class="q-item"><span class="q-num">15.</span>List the characteristics of a good algorithm.</div><div class="q-item"><span class="q-num">16.</span>What is a flowchart?</div><div class="q-item"><span class="q-num">17.</span>What is a syntax error?</div><div class="q-item"><span class="q-num">18.</span>What is a runtime error?</div><div class="q-item"><span class="q-num">19.</span>What is a semantic error?</div><div class="q-item"><span class="q-num">20.</span>What is experimental debugging?</div><div class="q-item"><span class="q-num">21.</span>What is a value in Python?</div><div class="q-item"><span class="q-num">22.</span>Name three basic Python data types discussed in Module 1.</div><div class="q-item"><span class="q-num">23.</span>What data type is the value 20?</div><div class="q-item"><span class="q-num">24.</span>What data type is the value 20.9?</div><div class="q-item"><span class="q-num">25.</span>What data type is the value "welcome"?</div><div class="q-item"><span class="q-num">26.</span>What is a string?</div><div class="q-item"><span class="q-num">27.</span>What are the three ways of writing strings shown in the notes?</div><div class="q-item"><span class="q-num">28.</span>What is the purpose of triple-quoted strings?</div><div class="q-item"><span class="q-num">29.</span>What does the escape sequence \n do?</div><div class="q-item"><span class="q-num">30.</span>What does the escape sequence \t do?</div><div class="q-item"><span class="q-num">31.</span>What does the escape sequence \\ represent?</div><div class="q-item"><span class="q-num">32.</span>What is a variable?</div><div class="q-item"><span class="q-num">33.</span>Why are meaningful variable names recommended?</div><div class="q-item"><span class="q-num">34.</span>What does assignment using = mean in Python?</div><div class="q-item"><span class="q-num">35.</span>Why is 17 = n invalid?</div><div class="q-item"><span class="q-num">36.</span>What does dynamically typed mean in the context of Python variables?</div><div class="q-item"><span class="q-num">37.</span>What is the difference between mutable and immutable values?</div><div class="q-item"><span class="q-num">38.</span>Name two immutable Python types listed in the notes.</div><div class="q-item"><span class="q-num">39.</span>Name two mutable Python types listed in the notes.</div><div class="q-item"><span class="q-num">40.</span>What is a keyword in Python?</div><div class="q-item"><span class="q-num">41.</span>Why cannot class be used as an ordinary variable name?</div><div class="q-item"><span class="q-num">42.</span>State two rules for naming Python variables.</div><div class="q-item"><span class="q-num">43.</span>What is a statement?</div><div class="q-item"><span class="q-num">44.</span>What is an expression?</div><div class="q-item"><span class="q-num">45.</span>What does evaluating an expression produce?</div><div class="q-item"><span class="q-num">46.</span>What do and, or, and not do?</div><div class="q-item"><span class="q-num">47.</span>What does int() do?</div><div class="q-item"><span class="q-num">48.</span>What does float() do?</div><div class="q-item"><span class="q-num">49.</span>What does str() do?</div><div class="q-item"><span class="q-num">50.</span>Why does input() usually need a type conversion before arithmetic?</div><div class="q-item"><span class="q-num">51.</span>What is composition in programming?</div><div class="q-item"><span class="q-num">52.</span>What does the modulus operator % return?</div><div class="q-item"><span class="q-num">53.</span>Give two uses of the modulus operator.</div><div class="q-item"><span class="q-num">54.</span>How can % be used to check whether an integer is even?</div><div class="q-item"><span class="q-num">55.</span>How can % be used to extract the rightmost digit?</div><div class="q-item"><span class="q-num">56.</span>What is the difference between = and ==?</div><div class="q-item"><span class="q-num">57.</span>How can a variable use its old value to compute a new value?</div><div class="q-item"><span class="q-num">58.</span>What does x += 1 mean?</div><div class="q-item"><span class="q-num">59.</span>What does y -= 1 mean?</div><div class="q-item"><span class="q-num">60.</span>What is iteration?</div><div class="q-item"><span class="q-num">61.</span>When is a for loop especially useful?</div><div class="q-item"><span class="q-num">62.</span>What does a for loop naturally traverse?</div><div class="q-item"><span class="q-num">63.</span>What is range(stop)?</div><div class="q-item"><span class="q-num">64.</span>What is range(start, stop)?</div><div class="q-item"><span class="q-num">65.</span>What is range(start, stop, step)?</div><div class="q-item"><span class="q-num">66.</span>What does range(10, 0, -2) generate?</div><div class="q-item"><span class="q-num">67.</span>Why is the stop value of range() not included?</div><div class="q-item"><span class="q-num">68.</span>What is a while statement used for?</div><div class="q-item"><span class="q-num">69.</span>What is the basic execution cycle of a while loop?</div><div class="q-item"><span class="q-num">70.</span>Why must a while loop update its loop-control variable when necessary?</div><div class="q-item"><span class="q-num">71.</span>What is an infinite loop?</div><div class="q-item"><span class="q-num">72.</span>State one difference between for and while loops.</div><div class="q-item"><span class="q-num">73.</span>What is the Collatz 3n + 1 sequence?</div><div class="q-item"><span class="q-num">74.</span>What happens to n in the Collatz sequence when n is even?</div><div class="q-item"><span class="q-num">75.</span>What happens to n in the Collatz sequence when n is odd?</div><div class="q-item"><span class="q-num">76.</span>When does the Collatz loop in the notes stop?</div><div class="q-item"><span class="q-num">77.</span>For n = 12, what sequence is produced by the Collatz example?</div><div class="q-item"><span class="q-num">78.</span>What are tables useful for when using loops?</div><div class="q-item"><span class="q-num">79.</span>What does the end argument of print() control?</div><div class="q-item"><span class="q-num">80.</span>What is meant by a two-dimensional table in the context of nested iteration?</div><div class="q-item"><span class="q-num">81.</span>What is a nested loop?</div><div class="q-item"><span class="q-num">82.</span>In a star-pattern program, what can the outer loop represent?</div><div class="q-item"><span class="q-num">83.</span>In a star-pattern program, what can the inner loop represent?</div><div class="q-item"><span class="q-num">84.</span>What does break do inside a loop?</div><div class="q-item"><span class="q-num">85.</span>What does continue do inside a loop?</div><div class="q-item"><span class="q-num">86.</span>What is pass used for?</div><div class="q-item"><span class="q-num">87.</span>What is paired data?</div><div class="q-item"><span class="q-num">88.</span>How can tuples be used to group paired information?</div><div class="q-item"><span class="q-num">89.</span>What is nested data?</div><div class="q-item"><span class="q-num">90.</span>How do nested loops process nested data?</div><div class="q-item"><span class="q-num">91.</span>What is a function?</div><div class="q-item"><span class="q-num">92.</span>Why are functions useful in a program?</div><div class="q-item"><span class="q-num">93.</span>What is the syntax for defining a function?</div><div class="q-item"><span class="q-num">94.</span>What is a parameter?</div><div class="q-item"><span class="q-num">95.</span>What is an argument?</div><div class="q-item"><span class="q-num">96.</span>What is the difference between a parameter and an argument?</div><div class="q-item"><span class="q-num">97.</span>What is a return value?</div><div class="q-item"><span class="q-num">98.</span>What is a fruitful function?</div><div class="q-item"><span class="q-num">99.</span>What is a void function in the terminology used in the notes?</div><div class="q-item"><span class="q-num">100.</span>What happens when a function has no return statement?</div></div><div class="quiz-card" id="mcqQuiz"><h3>20-MCQ Quiz — Module 1</h3><p>Choose one answer for each question, then click <strong>Submit Quiz</strong>.</p><div class="quiz-question"><h4>1. Which statement best describes a program?</h4><label class="quiz-option"><input name="mcq1" type="radio" value="0"/> <strong>A.</strong> A set of instructions for a task</label><label class="quiz-option"><input name="mcq1" type="radio" value="1"/> <strong>B.</strong> A hardware device</label><label class="quiz-option"><input name="mcq1" type="radio" value="2"/> <strong>C.</strong> Only a flowchart</label><label class="quiz-option"><input name="mcq1" type="radio" value="3"/> <strong>D.</strong> Only a variable</label></div><div class="quiz-question"><h4>2. Which error occurs when Python cannot understand the grammar of the code?</h4><label class="quiz-option"><input name="mcq2" type="radio" value="0"/> <strong>A.</strong> Semantic error</label><label class="quiz-option"><input name="mcq2" type="radio" value="1"/> <strong>B.</strong> Syntax error</label><label class="quiz-option"><input name="mcq2" type="radio" value="2"/> <strong>C.</strong> Runtime error</label><label class="quiz-option"><input name="mcq2" type="radio" value="3"/> <strong>D.</strong> Logic table</label></div><div class="quiz-question"><h4>3. Which tool uses standard symbols to represent an algorithm visually?</h4><label class="quiz-option"><input name="mcq3" type="radio" value="0"/> <strong>A.</strong> Flowchart</label><label class="quiz-option"><input name="mcq3" type="radio" value="1"/> <strong>B.</strong> Variable</label><label class="quiz-option"><input name="mcq3" type="radio" value="2"/> <strong>C.</strong> Interpreter</label><label class="quiz-option"><input name="mcq3" type="radio" value="3"/> <strong>D.</strong> Argument</label></div><div class="quiz-question"><h4>4. What does input() return by default?</h4><label class="quiz-option"><input name="mcq4" type="radio" value="0"/> <strong>A.</strong> An integer</label><label class="quiz-option"><input name="mcq4" type="radio" value="1"/> <strong>B.</strong> A float</label><label class="quiz-option"><input name="mcq4" type="radio" value="2"/> <strong>C.</strong> A string</label><label class="quiz-option"><input name="mcq4" type="radio" value="3"/> <strong>D.</strong> A Boolean</label></div><div class="quiz-question"><h4>5. What is the result of 7 % 3?</h4><label class="quiz-option"><input name="mcq5" type="radio" value="0"/> <strong>A.</strong> 1</label><label class="quiz-option"><input name="mcq5" type="radio" value="1"/> <strong>B.</strong> 2</label><label class="quiz-option"><input name="mcq5" type="radio" value="2"/> <strong>C.</strong> 3</label><label class="quiz-option"><input name="mcq5" type="radio" value="3"/> <strong>D.</strong> 2.333</label></div><div class="quiz-question"><h4>6. Which operator is used for exponentiation?</h4><label class="quiz-option"><input name="mcq6" type="radio" value="0"/> <strong>A.</strong> //</label><label class="quiz-option"><input name="mcq6" type="radio" value="1"/> <strong>B.</strong> %</label><label class="quiz-option"><input name="mcq6" type="radio" value="2"/> <strong>C.</strong> **</label><label class="quiz-option"><input name="mcq6" type="radio" value="3"/> <strong>D.</strong> ^^</label></div><div class="quiz-question"><h4>7. Which expression is evaluated first in the normal precedence order?</h4><label class="quiz-option"><input name="mcq7" type="radio" value="0"/> <strong>A.</strong> Addition</label><label class="quiz-option"><input name="mcq7" type="radio" value="1"/> <strong>B.</strong> Parentheses</label><label class="quiz-option"><input name="mcq7" type="radio" value="2"/> <strong>C.</strong> Comparison</label><label class="quiz-option"><input name="mcq7" type="radio" value="3"/> <strong>D.</strong> Logical OR</label></div><div class="quiz-question"><h4>8. Which is a valid Python variable name?</h4><label class="quiz-option"><input name="mcq8" type="radio" value="0"/> <strong>A.</strong> 1student</label><label class="quiz-option"><input name="mcq8" type="radio" value="1"/> <strong>B.</strong> student name</label><label class="quiz-option"><input name="mcq8" type="radio" value="2"/> <strong>C.</strong> student_name</label><label class="quiz-option"><input name="mcq8" type="radio" value="3"/> <strong>D.</strong> class</label></div><div class="quiz-question"><h4>9. Which statement correctly describes a for loop?</h4><label class="quiz-option"><input name="mcq9" type="radio" value="0"/> <strong>A.</strong> It is mainly used for definite iteration</label><label class="quiz-option"><input name="mcq9" type="radio" value="1"/> <strong>B.</strong> It always creates an infinite loop</label><label class="quiz-option"><input name="mcq9" type="radio" value="2"/> <strong>C.</strong> It can only process integers</label><label class="quiz-option"><input name="mcq9" type="radio" value="3"/> <strong>D.</strong> It cannot use range()</label></div><div class="quiz-question"><h4>10. What does range(1, 5) generate?</h4><label class="quiz-option"><input name="mcq10" type="radio" value="0"/> <strong>A.</strong> 1, 2, 3, 4</label><label class="quiz-option"><input name="mcq10" type="radio" value="1"/> <strong>B.</strong> 1, 2, 3, 4, 5</label><label class="quiz-option"><input name="mcq10" type="radio" value="2"/> <strong>C.</strong> 0, 1, 2, 3, 4</label><label class="quiz-option"><input name="mcq10" type="radio" value="3"/> <strong>D.</strong> 2, 3, 4, 5</label></div><div class="quiz-question"><h4>11. What happens when n is even in the Collatz sequence?</h4><label class="quiz-option"><input name="mcq11" type="radio" value="0"/> <strong>A.</strong> n = 3n + 1</label><label class="quiz-option"><input name="mcq11" type="radio" value="1"/> <strong>B.</strong> n = n // 2</label><label class="quiz-option"><input name="mcq11" type="radio" value="2"/> <strong>C.</strong> n = n * 2</label><label class="quiz-option"><input name="mcq11" type="radio" value="3"/> <strong>D.</strong> n = n - 1</label></div><div class="quiz-question"><h4>12. What does break do?</h4><label class="quiz-option"><input name="mcq12" type="radio" value="0"/> <strong>A.</strong> Skips only the current iteration</label><label class="quiz-option"><input name="mcq12" type="radio" value="1"/> <strong>B.</strong> Exits the loop</label><label class="quiz-option"><input name="mcq12" type="radio" value="2"/> <strong>C.</strong> Repeats the loop</label><label class="quiz-option"><input name="mcq12" type="radio" value="3"/> <strong>D.</strong> Defines a function</label></div><div class="quiz-question"><h4>13. What does continue do?</h4><label class="quiz-option"><input name="mcq13" type="radio" value="0"/> <strong>A.</strong> Exits the program</label><label class="quiz-option"><input name="mcq13" type="radio" value="1"/> <strong>B.</strong> Exits the loop</label><label class="quiz-option"><input name="mcq13" type="radio" value="2"/> <strong>C.</strong> Skips to the next iteration</label><label class="quiz-option"><input name="mcq13" type="radio" value="3"/> <strong>D.</strong> Returns a value</label></div><div class="quiz-question"><h4>14. What does pass do?</h4><label class="quiz-option"><input name="mcq14" type="radio" value="0"/> <strong>A.</strong> Performs a multiplication</label><label class="quiz-option"><input name="mcq14" type="radio" value="1"/> <strong>B.</strong> Acts as a placeholder and does nothing</label><label class="quiz-option"><input name="mcq14" type="radio" value="2"/> <strong>C.</strong> Stops Python</label><label class="quiz-option"><input name="mcq14" type="radio" value="3"/> <strong>D.</strong> Returns None from every function</label></div><div class="quiz-question"><h4>15. Which structure is suitable for grouping a name and year as paired data?</h4><label class="quiz-option"><input name="mcq15" type="radio" value="0"/> <strong>A.</strong> Tuple</label><label class="quiz-option"><input name="mcq15" type="radio" value="1"/> <strong>B.</strong> Keyword</label><label class="quiz-option"><input name="mcq15" type="radio" value="2"/> <strong>C.</strong> Operator</label><label class="quiz-option"><input name="mcq15" type="radio" value="3"/> <strong>D.</strong> Flowchart</label></div><div class="quiz-question"><h4>16. What is a parameter?</h4><label class="quiz-option"><input name="mcq16" type="radio" value="0"/> <strong>A.</strong> The actual value passed during a call</label><label class="quiz-option"><input name="mcq16" type="radio" value="1"/> <strong>B.</strong> A variable name in a function definition</label><label class="quiz-option"><input name="mcq16" type="radio" value="2"/> <strong>C.</strong> The output printed by Python</label><label class="quiz-option"><input name="mcq16" type="radio" value="3"/> <strong>D.</strong> A loop-control statement</label></div><div class="quiz-question"><h4>17. What is an argument?</h4><label class="quiz-option"><input name="mcq17" type="radio" value="0"/> <strong>A.</strong> A variable name in a definition</label><label class="quiz-option"><input name="mcq17" type="radio" value="1"/> <strong>B.</strong> The actual value passed to a function</label><label class="quiz-option"><input name="mcq17" type="radio" value="2"/> <strong>C.</strong> A Python keyword</label><label class="quiz-option"><input name="mcq17" type="radio" value="3"/> <strong>D.</strong> A syntax error</label></div><div class="quiz-question"><h4>18. Which keyword defines a function?</h4><label class="quiz-option"><input name="mcq18" type="radio" value="0"/> <strong>A.</strong> func</label><label class="quiz-option"><input name="mcq18" type="radio" value="1"/> <strong>B.</strong> function</label><label class="quiz-option"><input name="mcq18" type="radio" value="2"/> <strong>C.</strong> def</label><label class="quiz-option"><input name="mcq18" type="radio" value="3"/> <strong>D.</strong> return</label></div><div class="quiz-question"><h4>19. What does return do in a function?</h4><label class="quiz-option"><input name="mcq19" type="radio" value="0"/> <strong>A.</strong> Sends a result back to the caller</label><label class="quiz-option"><input name="mcq19" type="radio" value="1"/> <strong>B.</strong> Starts a loop</label><label class="quiz-option"><input name="mcq19" type="radio" value="2"/> <strong>C.</strong> Imports a module</label><label class="quiz-option"><input name="mcq19" type="radio" value="3"/> <strong>D.</strong> Creates a keyword</label></div><div class="quiz-question"><h4>20. What happens by default when a function reaches the end without return?</h4><label class="quiz-option"><input name="mcq20" type="radio" value="0"/> <strong>A.</strong> It returns 0</label><label class="quiz-option"><input name="mcq20" type="radio" value="1"/> <strong>B.</strong> It returns None</label><label class="quiz-option"><input name="mcq20" type="radio" value="2"/> <strong>C.</strong> It returns False</label><label class="quiz-option"><input name="mcq20" type="radio" value="3"/> <strong>D.</strong> It raises SyntaxError</label></div><div class="quiz-actions"><button class="quiz-btn" onclick="submitQuiz()">Submit Quiz</button><button class="quiz-btn quiz-reset" onclick="resetQuiz()">Reset</button></div><div class="quiz-result" id="quizResult"></div></div></section>
+<footer><strong>Kiran Mudaraddi · Python Programming · Module 1</strong><br/>Interactive course notes for classroom learning, self-study and lab preparation.</footer>
+<script>
+const topics=[...document.querySelectorAll('.topic')];
+function filterTopics(){const q=document.getElementById('search').value.toLowerCase().trim();topics.forEach(t=>t.classList.toggle('hidden',q && !t.innerText.toLowerCase().includes(q)));}
+function toggleTheme(){document.body.classList.toggle('dark');localStorage.setItem('pyTheme',document.body.classList.contains('dark')?'dark':'light');}
+if(localStorage.getItem('pyTheme')==='dark')document.body.classList.add('dark');
+window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop)/(h.scrollHeight-h.clientHeight)*100)+'%';});
+function copyCode(btn){const code=btn.closest('.code-card').querySelector('code').innerText;navigator.clipboard.writeText(code).then(()=>{btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy',1000)})}
 
-<section id="practice" class="lesson">
-<div class="tag">🧪 PRACTICE</div>
-<h2>Practice before the quiz</h2>
-<p>For every question use: <b>Predict → Run → Observe → Explain.</b></p>
-<div class="practice-item"><b>1 · Variables:</b> Create variables for student name, semester and CGPA. Display them.</div>
-<div class="practice-item"><b>2 · Expressions:</b> Predict the output of <code>10 + 2 * 3</code> and <code>(10 + 2) * 3</code>.</div>
-<div class="practice-item"><b>3 · Strings:</b> Ask for a name and print the first three characters.</div>
-<div class="practice-item"><b>4 · Modulus:</b> Read a number and determine whether it is divisible by 5.</div>
-<div class="practice-item"><b>5 · for loop:</b> Print the first 10 natural numbers and their squares.</div>
-<div class="practice-item"><b>6 · while:</b> Print numbers from 10 down to 1.</div>
-<div class="practice-item"><b>7 · break:</b> Search for a number in a list and stop when it is found.</div>
-<div class="practice-item"><b>8 · continue:</b> Print numbers from 1 to 20 but skip multiples of 3.</div>
-<div class="practice-item"><b>9 · nested loops:</b> Print a 5 × 5 multiplication table.</div>
-<div class="practice-item"><b>10 · function:</b> Write a function that accepts three marks and returns their average.</div>
-</section>
-
-<section id="quiz" class="lesson">
-<div class="tag">🎯 QUIZ · 10 MARKS</div>
-<h2>Module 1 Knowledge Check</h2>
-<p>10 questions · 1 mark each. Select an answer and submit. Correct answers are highlighted after submission.</p>
-<div id="quizBox"></div>
-<button class="btn primary" id="submitQuiz">Submit Quiz</button>
-<button class="btn" id="resetQuiz">Reset</button>
-<div id="quizResult"></div>
-</section>
-
-<section id="assignment" class="lesson">
-<div class="tag">📝 ASSIGNMENT · 20 MARKS</div>
-<h2>Module 1 Coding Assignment</h2>
-<ol>
-<li><b>Concepts — 4 marks:</b> Explain syntax, runtime and semantic errors with one original example each.</li>
-<li><b>Predict output — 4 marks:</b> Predict and explain the output of two Python programs involving expressions and loops.</li>
-<li><b>Debugging — 4 marks:</b> Find, classify and correct two faulty Python programs.</li>
-<li><b>Iteration — 4 marks:</b> Write a program to generate a multiplication table using a loop and explain the loop.</li>
-<li><b>Functions — 4 marks:</b> Write a function with arguments and a return value to solve a small real-world problem.</li>
-</ol>
-<div class="callout"><b>Submission evidence:</b> Include source code, sample input/output, test cases and a short explanation of how you tested your program.</div>
-</section>
-
-<section id="fa" class="lesson">
-<div class="tag">🏆 FORMATIVE ASSESSMENT · 20 MARKS</div>
-<h2>Show what you can do</h2>
-<div class="assessment">
-<div><b>Individual · 7 marks</b><p>Think, Code & Debug — analyse a problem, write/correct code, test it and explain the reasoning.</p></div>
-<div><b>Group · 7 marks</b><p>Debugging Team Challenge — classify errors, propose a hypothesis, fix the program and demonstrate evidence.</p></div>
-<div><b>Presentation · 6 marks</b><p>Explain It Like a Programmer — explain one Module 1 concept with a Python demonstration and answer questions.</p></div>
-</div>
-<table><tr><th>Component</th><th>Marks</th></tr><tr><td>Individual</td><td>7</td></tr><tr><td>Group</td><td>7</td></tr><tr><td>Presentation</td><td>6</td></tr><tr><th>Total</th><th>20</th></tr></table>
-</section>
-
-<footer><b>Prof. Kiran Mudaraddi</b> · Assistant Professor, CSE · Ballari Institute of Technology & Management (BITM), Ballari</footer>
-</main>
-</div>
-<script src="assets/app.js"></script>
-</body>
-</html>
+const quizAnswers=[0, 1, 0, 2, 0, 2, 1, 2, 0, 0, 1, 1, 2, 1, 0, 1, 1, 2, 0, 1];
+function submitQuiz(){let score=0,answered=0;quizAnswers.forEach((a,i)=>{const pick=document.querySelector('input[name="mcq'+(i+1)+'"]:checked');if(pick){answered++;if(Number(pick.value)===a)score++;}});const box=document.getElementById('quizResult');box.style.display='block';box.innerHTML='<strong>Score: '+score+'/20</strong><br>'+answered+' of 20 questions answered.'+(answered<20?' Complete the remaining questions and submit again.':' Review the module topics for any questions you missed.');box.scrollIntoView({behavior:'smooth',block:'nearest'});}
+function resetQuiz(){document.querySelectorAll('#mcqQuiz input[type="radio"]').forEach(x=>x.checked=false);const box=document.getElementById('quizResult');box.style.display='none';box.innerHTML='';}
+</script></body></html>
