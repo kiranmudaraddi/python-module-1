@@ -12,6 +12,52 @@ footer{padding:35px 6vw;background:#101827;color:#cbd5e1}footer strong{color:whi
 .author-credit{display:flex;align-items:center;gap:14px;width:max-content;max-width:100%;margin:24px 0 8px;padding:13px 20px 13px 15px;border:1px solid #dbe5ef;border-left:5px solid #3776ab;background:linear-gradient(135deg,#ffffff 0%,#f4f8fc 100%);border-radius:14px;box-shadow:0 8px 24px rgba(55,118,171,.12);color:#334155;font-size:.92rem;line-height:1.3}.author-credit:before{content:"KM";display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:linear-gradient(135deg,#3776ab,#1f5f91);color:#fff;font-weight:900;font-size:13px;letter-spacing:.03em;box-shadow:0 5px 12px rgba(55,118,171,.25)}.author-credit strong{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:#64748b;margin-bottom:3px}.author-credit span{font-size:1.3rem;font-weight:900;letter-spacing:-.02em;background:linear-gradient(90deg,#1f5f91,#3776ab);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hidden{display:none!important}
 body.dark{--bg:#0b1020;--card:#111827;--text:#edf2f7;--muted:#9aa7ba;--line:#263244;--accent:#74b9ff;--code:#050a12;--codeText:#e5e7eb}body.dark header{background:rgba(11,16,32,.94)}body.dark .author-credit{border-color:#263b55;border-left-color:#74b9ff;background:linear-gradient(135deg,#111827,#172338);color:#cbd5e1;box-shadow:0 8px 24px rgba(0,0,0,.25)}body.dark .author-credit strong{color:#93a4b8}body.dark .author-credit span{background:linear-gradient(90deg,#74b9ff,#b8dcff);-webkit-background-clip:text;background-clip:text;color:transparent}body.dark aside{background:rgba(17,24,39,.55)}body.dark .four>div,body.dark .pill{background:#111827}body.dark .hero{background:radial-gradient(circle at 85% 15%,rgba(116,185,255,.13),transparent 30%)}
+
+/* Mobile course menu */
+.mobile-menu-btn{
+display:none;
+border:1px solid var(--line);
+background:var(--card);
+color:var(--text);
+border-radius:10px;
+padding:9px 11px;
+cursor:pointer;
+font-weight:800;
+font-size:18px;
+line-height:1;
+}
+.mobile-overlay{display:none}
+@media(max-width:980px){
+  .mobile-menu-btn{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .course-sidebar{
+    display:block;
+    position:fixed;
+    left:0;
+    top:61px;
+    bottom:0;
+    width:min(330px,88vw);
+    height:auto;
+    z-index:80;
+    overflow-y:auto;
+    transform:translateX(-105%);
+    transition:transform .25s ease;
+    box-shadow:12px 0 35px rgba(15,23,42,.18);
+  }
+  body.menu-open .course-sidebar{transform:translateX(0)}
+  .mobile-overlay{
+    position:fixed;
+    inset:61px 0 0 0;
+    z-index:70;
+    background:rgba(15,23,42,.42);
+    backdrop-filter:blur(2px);
+  }
+  body.menu-open .mobile-overlay{display:block}
+}
+@media(max-width:650px){
+  .top{gap:8px}
+  .mobile-menu-btn{font-size:17px;padding:8px 10px}
+}
+
 @media(max-width:980px){.layout{grid-template-columns:1fr}aside{display:none}.four{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.top{padding:10px}.brand{font-size:14px}.search{display:none}.hero{padding:50px 22px 40px}.content{padding:20px 22px 60px}.topic{grid-template-columns:1fr}.topic-num{width:40px;height:40px}.four,.practice-list,.grid{grid-template-columns:1fr}h1{font-size:48px}}
 
 
@@ -141,7 +187,7 @@ body.dark .topic-question{background:linear-gradient(90deg,#101b31,#111827);bord
 .dark .assessment-note{background:#111b30}
 @media(max-width:760px){.student-details{grid-template-columns:1fr}.quiz-actions{position:sticky;bottom:8px;flex-wrap:wrap}}
 </style></head><body><div class="progress" id="progress"></div>
-<header><div class="top"><a class="brand" href="#top">Python <span>Module 1</span></a><div class="search"><input id="search" oninput="filterTopics()" placeholder="Search topics, loops, functions..."/></div><button class="theme" onclick="toggleTheme()">☾</button></div></header>
+<header><div class="top"><button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open module menu" aria-expanded="false">☰</button><a class="brand" href="#top">Python <span>Module 1</span></a><div class="search"><input id="search" oninput="filterTopics()" placeholder="Search topics, loops, functions..."/></div><button class="theme" onclick="toggleTheme()">☾</button></div></header><div class="mobile-overlay" onclick="toggleMobileMenu()"></div>
 <div class="layout"><aside class="course-sidebar">
 <div class="side-module">
 <div class="side-kicker">MODULE 1</div>
@@ -514,4 +560,18 @@ function resetQuiz(){
   document.getElementById('studentSection').value='';
   const box=document.getElementById('quizResult');box.style.display='none';box.innerHTML='';
 }
+
+function toggleMobileMenu(){
+  document.body.classList.toggle('menu-open');
+  const btn=document.querySelector('.mobile-menu-btn');
+  if(btn) btn.setAttribute('aria-expanded',document.body.classList.contains('menu-open')?'true':'false');
+}
+document.addEventListener('click',function(e){
+  const link=e.target.closest('.course-sidebar a');
+  if(link && window.innerWidth<=980) document.body.classList.remove('menu-open');
+});
+window.addEventListener('resize',function(){
+  if(window.innerWidth>980) document.body.classList.remove('menu-open');
+});
+
 </script></body></html>
