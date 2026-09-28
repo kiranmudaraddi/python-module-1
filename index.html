@@ -142,62 +142,77 @@ body.dark .side-part span{color:#74b9ff}
 @media(max-width:700px){.loopbox,.cycle{grid-template-columns:1fr}.matrix{grid-template-columns:repeat(2,1fr)}.code-head{padding-left:68px}}
 
 
-/* Modern Python Runner — redesigned only; rest of the site remains unchanged */
+/* Python Runner — clean educational IDE */
 .python-runner{max-width:1180px;margin:0 auto;padding:34px 24px 64px;scroll-margin-top:80px}
-.runner-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:0;overflow:hidden;box-shadow:0 14px 38px rgba(15,23,42,.08)}
-.runner-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 22px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,var(--card),rgba(55,118,171,.045))}
-.runner-title-wrap{display:flex;align-items:center;gap:13px;min-width:0}
-.runner-python-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#3776ab,#245b8f);color:#fff;font-size:22px;box-shadow:0 7px 18px rgba(55,118,171,.22);flex:0 0 44px}
-.runner-head h2{margin:0;font-size:clamp(1.35rem,2.4vw,1.8rem);letter-spacing:-.03em}
-.runner-head p{margin:3px 0 0;color:var(--muted);line-height:1.45;font-size:.88rem}
-.runner-run-top{border:0;border-radius:10px;padding:10px 15px;font-weight:850;cursor:pointer;background:linear-gradient(135deg,#4f46e5,#2563eb);color:#fff;box-shadow:0 7px 16px rgba(79,70,229,.2);white-space:nowrap}
-.runner-workspace{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(285px,.58fr);gap:0;background:#eef2f7}
-.runner-editor-panel{min-width:0;padding:18px;border-right:1px solid #d9e0e9}
-.runner-side-panel{padding:18px;display:flex;flex-direction:column;gap:16px;background:var(--card)}
-.runner-panel-label{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 8px;font-size:.78rem;font-weight:850;color:var(--text);letter-spacing:.04em;text-transform:uppercase}
-.runner-file{display:flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid #263244;border-bottom:0;border-radius:13px 13px 0 0;background:#0b1220;color:#cbd5e1;font:700 12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-.runner-file-dot{width:9px;height:9px;border-radius:50%;background:#3776ab;box-shadow:13px 0 #ffd343,26px 0 #22c55e;margin-right:21px}
-.runner-editor{display:grid;grid-template-columns:48px minmax(0,1fr);min-height:330px;border:1px solid #263244;border-radius:0 0 13px 13px;overflow:hidden;background:#0b1220}
-.runner-gutter{padding:14px 10px 14px 0;background:#09101c;border-right:1px solid #1e293b;color:#64748b;text-align:right;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;user-select:none;overflow:hidden}
-.runner-gutter div{height:21px}
-.runner-code{width:100%;height:100%;min-height:330px;box-sizing:border-box;border:0;border-radius:0;background:#0b1220;color:#e5eefb;font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;padding:14px;outline:none;resize:none;tab-size:4;white-space:pre;overflow:auto}
-.runner-code:focus{box-shadow:inset 0 0 0 2px rgba(96,165,250,.18)}
-.runner-hint{margin:8px 0 0;color:#718096;font-size:.75rem}
-.runner-field{min-width:0}
-.runner-input{width:100%;min-height:112px;box-sizing:border-box;border:1px solid var(--line);border-radius:12px;background:#0b1220;color:#e5eefb;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;padding:13px;outline:none;resize:vertical}
+.runner-card{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 16px 40px rgba(20,30,50,.08)}
+.runner-head{padding:24px 26px 20px;background:linear-gradient(135deg,#f7fbff,#fff);border-bottom:1px solid var(--line)}
+.runner-heading{display:flex;align-items:center;gap:13px}
+.runner-python-badge{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:#3776ab;color:#fff;font-size:23px;box-shadow:0 7px 16px rgba(55,118,171,.2)}
+.runner-head h2{margin:0;font-size:clamp(1.5rem,2.8vw,2rem);letter-spacing:-.035em}
+.runner-head p{margin:4px 0 0;color:var(--muted);font-size:.9rem}
+.runner-subbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px}
+.runner-subbar span{font-size:.78rem;color:var(--muted)}
+.runner-engine{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:99px;background:#eef7f1;color:#26724b;font-size:.7rem;font-weight:800}
+.runner-engine:before{content:"";width:7px;height:7px;border-radius:50%;background:#28a05a}
+.runner-main{padding:20px 22px 0}
+.runner-code-shell{border:1px solid #27364a;border-radius:16px;overflow:hidden;background:#0b1220;box-shadow:0 8px 24px rgba(15,23,42,.12)}
+.runner-code-top{display:flex;align-items:center;justify-content:space-between;padding:10px 13px;background:#111b2b;color:#b9c6d8;font-size:.74rem}
+.runner-file-name{display:flex;align-items:center;gap:8px;font-weight:800}
+.runner-py-dot{width:9px;height:9px;border-radius:50%;background:#3776ab}
+.runner-code-tools{display:flex;gap:7px}
+.runner-mini-btn{border:1px solid #33445b;background:#172338;color:#dbe7f5;border-radius:7px;padding:5px 9px;font-size:.7rem;cursor:pointer}
+.runner-editor{display:grid;grid-template-columns:42px 1fr;min-height:260px}
+.runner-lines{padding:14px 8px 14px 0;background:#080f1b;color:#596a7f;text-align:right;font:12px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;user-select:none;overflow:hidden}
+.runner-lines div{height:20.4px}
+.runner-code{width:100%;min-height:260px;box-sizing:border-box;border:0;outline:0;resize:none;overflow:auto;background:#0b1220;color:#e7edf6;padding:14px;font:13px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;tab-size:4;white-space:pre}
+.runner-code:focus{box-shadow:inset 0 0 0 1px rgba(96,165,250,.35)}
+.runner-tip{margin:8px 2px 0;font-size:.72rem;color:var(--muted)}
+.runner-io{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.runner-panel{min-width:0}
+.runner-label{display:flex;align-items:center;justify-content:space-between;margin:0 0 7px;font-size:.76rem;font-weight:850;color:var(--text)}
+.runner-label small{font-size:.66rem;font-weight:600;color:var(--muted)}
+.runner-input{width:100%;min-height:100px;box-sizing:border-box;resize:vertical;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);padding:11px;font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;outline:none}
 .runner-input:focus{border-color:#60a5fa;box-shadow:0 0 0 3px rgba(96,165,250,.12)}
-.runner-output{min-width:0}
-.runner-output pre{margin:0;min-height:112px;max-height:220px;overflow:auto;white-space:pre-wrap;word-break:break-word;background:#07101d;color:#dbeafe;border:1px solid #263244;border-radius:12px;padding:13px;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-.runner-actions{display:flex;gap:8px;flex-wrap:wrap;padding:14px 18px;border-top:1px solid var(--line);background:var(--card)}
-.runner-btn{border:0;border-radius:9px;padding:9px 14px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,#4f46e5,#2563eb);color:#fff}
+.runner-output pre{margin:0;min-height:100px;max-height:190px;overflow:auto;box-sizing:border-box;white-space:pre-wrap;word-break:break-word;border:1px solid #26364a;border-radius:12px;background:#07101d;color:#dbeafe;padding:11px;font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.runner-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:18px 22px 12px;margin-top:18px;border-top:1px solid var(--line)}
+.runner-btn{border:0;border-radius:9px;padding:10px 15px;font-weight:850;font-size:.8rem;cursor:pointer}
+.runner-btn.primary{background:#3776ab;color:#fff;box-shadow:0 5px 12px rgba(55,118,171,.18)}
+.runner-btn.primary:hover{background:#2e6797}
 .runner-btn.secondary{background:var(--card);color:var(--text);border:1px solid var(--line)}
 .runner-btn.secondary:hover{border-color:#9bb9d7;background:#f7fbff}
-.runner-status{font-size:.82rem;color:var(--muted);padding:0 18px 15px;background:var(--card)}
-.runner-status.ready{color:#496579}
-body.dark .runner-workspace{background:#0b1220}
-body.dark .runner-editor-panel{border-right-color:#263244}
-body.dark .runner-side-panel{background:#111827}
-body.dark .runner-file{background:#050a12}
-body.dark .runner-gutter{background:#050a12;border-color:#1e293b}
-body.dark .runner-code{background:#050a12}
-body.dark .runner-input{background:#050a12;border-color:#263244}
-body.dark .runner-btn.secondary{background:#111827}
-body.dark .runner-btn.secondary:hover{background:#172338;border-color:#3b5b7a}
-@media(max-width:820px){
-  .runner-workspace{grid-template-columns:1fr}
-  .runner-editor-panel{border-right:0;border-bottom:1px solid #d9e0e9}
+.runner-status{padding:0 22px 17px;color:var(--muted);font-size:.75rem}
+body.dark .runner-head{background:linear-gradient(135deg,#111b2b,#111827)}
+body.dark .runner-engine{background:#142a20;color:#86d5a4}
+body.dark .runner-btn.secondary:hover{background:#172338}
+body.dark .runner-input{background:#0f1725}
+@media(max-width:720px){
+  .python-runner{padding:26px 14px 48px}
+  .runner-card{border-radius:19px}
+  .runner-head{padding:19px 17px 16px}
+  .runner-python-badge{width:40px;height:40px;flex-basis:40px;border-radius:12px;font-size:20px}
+  .runner-head h2{font-size:1.35rem}
+  .runner-head p{font-size:.78rem}
+  .runner-subbar{margin-top:14px}
+  .runner-main{padding:15px 14px 0}
+  .runner-editor{min-height:230px}
+  .runner-code{min-height:230px;font-size:12px}
+  .runner-io{grid-template-columns:1fr;gap:13px}
+  .runner-input,.runner-output pre{min-height:82px}
+  .runner-actions{padding:14px;margin-top:14px;display:grid;grid-template-columns:1fr 1fr}
+  .runner-btn{min-height:42px}
+  .runner-status{padding:0 14px 14px}
 }
-@media(max-width:650px){
-  .python-runner{padding:24px 14px 48px}
-  .runner-head{padding:17px 15px}
-  .runner-head p{font-size:.8rem}
-  .runner-run-top{padding:9px 12px}
-  .runner-workspace{display:block}
-  .runner-editor-panel,.runner-side-panel{padding:14px}
-  .runner-editor{min-height:270px}
-  .runner-code{min-height:270px;font-size:13px}
-  .runner-actions{padding:12px 14px}
-  .runner-status{padding:0 14px 13px}
+@media(max-width:390px){
+  .runner-head{padding:16px 14px}
+  .runner-heading{gap:9px}
+  .runner-python-badge{width:36px;height:36px;flex-basis:36px;font-size:18px}
+  .runner-head h2{font-size:1.2rem}
+  .runner-head p{display:none}
+  .runner-subbar span{font-size:.68rem}
+  .runner-code-tools{display:none}
+  .runner-editor{grid-template-columns:34px 1fr;min-height:215px}
+  .runner-code{min-height:215px;font-size:11.5px}
+  .runner-lines{font-size:10px}
 }
 
 /* Question Bank & Quiz */
@@ -472,46 +487,52 @@ print(answer)</code></pre><div class="output"><b>Expected output</b><pre>36</pre
 <section class="python-runner" id="python-runner">
 <div class="runner-card">
   <div class="runner-head">
-    <div class="runner-title-wrap">
-      <div class="runner-python-icon">🐍</div>
+    <div class="runner-heading">
+      <div class="runner-python-badge">🐍</div>
       <div>
         <h2>Python Runner</h2>
-        <p>Write, run and experiment with Python directly in your browser.</p>
+        <p>Learn by writing, running and experimenting with Python.</p>
       </div>
     </div>
-    <button class="runner-run-top" type="button" onclick="runPythonCode()">▶ Run Python</button>
+    <div class="runner-subbar">
+      <span>Interactive browser-based Python</span>
+      <span class="runner-engine">Python ready</span>
+    </div>
   </div>
 
-  <div class="runner-workspace">
-    <div class="runner-editor-panel">
-      <div class="runner-panel-label"><span>Python Program</span><span style="color:var(--muted);font-weight:600;text-transform:none;letter-spacing:0">main.py</span></div>
-      <div class="runner-file"><span class="runner-file-dot"></span>main.py</div>
+  <div class="runner-main">
+    <div class="runner-code-shell">
+      <div class="runner-code-top">
+        <div class="runner-file-name"><span class="runner-py-dot"></span>main.py</div>
+        <div class="runner-code-tools">
+          <button class="runner-mini-btn" type="button" onclick="copyPythonCode()">Copy</button>
+          <button class="runner-mini-btn" type="button" onclick="loadPythonExample()">Example</button>
+        </div>
+      </div>
       <div class="runner-editor">
-        <div class="runner-gutter" id="pythonLineNumbers" aria-hidden="true"></div>
+        <div class="runner-lines" id="pythonLineNumbers" aria-hidden="true"></div>
         <textarea id="pythonCode" class="runner-code" spellcheck="false" wrap="off" aria-label="Python code editor">name = input("Enter your name: ")
 print("Hello", name)</textarea>
       </div>
-      <div class="runner-hint">Tip: edit the code, then press <strong>Run Python</strong> to see what happens.</div>
     </div>
+    <div class="runner-tip">💡 Change the code and run it again to observe how the output changes.</div>
 
-    <div class="runner-side-panel">
-      <div class="runner-field">
-        <label class="runner-panel-label" for="pythonInput"><span>⌨ Input Values</span></label>
-        <textarea id="pythonInput" class="runner-input" spellcheck="false" placeholder="Enter one input value per line...">Kiran</textarea>
-        <div class="runner-hint">For programs using <code>input()</code>, enter one value per line.</div>
+    <div class="runner-io">
+      <div class="runner-panel">
+        <label class="runner-label" for="pythonInput">⌨ Input <small>one value per line</small></label>
+        <textarea id="pythonInput" class="runner-input" spellcheck="false" placeholder="Enter input values...">Kiran</textarea>
       </div>
-
-      <div class="runner-output">
-        <div class="runner-panel-label"><span>▶ Output</span></div>
+      <div class="runner-panel runner-output">
+        <div class="runner-label">▶ Output <small>program result</small></div>
         <pre id="pythonOutput">Ready. Click “Run Python”.</pre>
       </div>
     </div>
   </div>
 
   <div class="runner-actions">
-    <button class="runner-btn" type="button" onclick="runPythonCode()">▶ Run Python</button>
+    <button class="runner-btn primary" type="button" onclick="runPythonCode()">▶ Run Python</button>
     <button class="runner-btn secondary" type="button" onclick="loadPythonExample()">💡 Load Example</button>
-    <button class="runner-btn secondary" type="button" onclick="copyPythonCode()">📋 Copy</button>
+    <button class="runner-btn secondary" type="button" onclick="copyPythonCode()">📋 Copy Code</button>
     <button class="runner-btn secondary" type="button" onclick="clearPythonRunner()">↻ Reset</button>
   </div>
   <div class="runner-status" id="pythonStatus">Python engine will load when you first run a program.</div>
@@ -710,23 +731,25 @@ let pyodideLoading=null;
 
 function updatePythonLineNumbers(){
   const code=document.getElementById('pythonCode');
-  const gutter=document.getElementById('pythonLineNumbers');
-  if(!code || !gutter) return;
-  const count=Math.max(1,code.value.split('\n').length);
-  gutter.innerHTML=Array.from({length:count},(_,i)=>'<div>'+ (i+1) +'</div>').join('');
+  const lines=document.getElementById('pythonLineNumbers');
+  if(!code || !lines) return;
+  const n=Math.max(1,code.value.split('\n').length);
+  lines.innerHTML=Array.from({length:n},(_,i)=>'<div>'+(i+1)+'</div>').join('');
 }
-function syncPythonEditorScroll(){
+function syncPythonLineNumbers(){
   const code=document.getElementById('pythonCode');
-  const gutter=document.getElementById('pythonLineNumbers');
-  if(code && gutter) gutter.scrollTop=code.scrollTop;
+  const lines=document.getElementById('pythonLineNumbers');
+  if(code && lines) lines.scrollTop=code.scrollTop;
 }
 function copyPythonCode(){
   const code=document.getElementById('pythonCode');
   if(!code) return;
   navigator.clipboard.writeText(code.value).then(()=>{
     const status=document.getElementById('pythonStatus');
-    status.textContent='Python code copied to clipboard.';
-    setTimeout(()=>{ if(status) status.textContent='Python engine will load when you first run a program.'; },1600);
+    if(status){
+      status.textContent='Code copied to clipboard.';
+      setTimeout(()=>status.textContent='Python engine will load when you first run a program.',1600);
+    }
   });
 }
 document.addEventListener('DOMContentLoaded',()=>{
@@ -734,7 +757,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(code){
     updatePythonLineNumbers();
     code.addEventListener('input',updatePythonLineNumbers);
-    code.addEventListener('scroll',syncPythonEditorScroll);
+    code.addEventListener('scroll',syncPythonLineNumbers);
   }
 });
 async function getPyodide(){
