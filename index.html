@@ -705,20 +705,26 @@ print("Result is", result if result is not None else "Invalid choice")</code></p
       <h3>3 · Individual Quiz</h3>
       <p>Complete the <strong>12-question Module 1 quiz</strong>. Each question carries 0.5 mark.</p>
       <div class="fa1-example"><strong>Important:</strong> The quiz is individual. Your Name, USN and Section are recorded with the result.</div>
-      <button class="fa1-upload-btn" type="button" onclick="document.getElementById('mcqQuiz').scrollIntoView({behavior:'smooth'})">Go to 6-Mark Quiz ↓</button>
+      <button class="fa1-upload-btn" type="button" onclick="openSecureQuiz()">🔐 Take Secure 6-Mark Quiz →</button>
       <div class="quiz-mini">Quiz: 12 questions × 0.5 mark = <strong>6 marks</strong></div>
     </div>
   </div>
   <div class="fa1-submission-rule"><strong>Submission rule:</strong> Only students from <strong>Section M or Section N</strong> can unlock this portal. For stronger control, the Google Apps Script backend should also verify the official M/N USN list before accepting a file or quiz result.</div>
 </div><h3 class="q-section">100 Practice Questions</h3><div class="question-bank"><div class="q-item"><span class="q-num">1.</span>What is a program?</div><div class="q-item"><span class="q-num">2.</span>What is meant by a sequence of instructions in programming?</div><div class="q-item"><span class="q-num">3.</span>List the basic building blocks of a program.</div><div class="q-item"><span class="q-num">4.</span>What is meant by input in a program?</div><div class="q-item"><span class="q-num">5.</span>What is meant by output in a program?</div><div class="q-item"><span class="q-num">6.</span>What is conditional execution?</div><div class="q-item"><span class="q-num">7.</span>What is repetition in a program?</div><div class="q-item"><span class="q-num">8.</span>What is mathematical computation? Give one example.</div><div class="q-item"><span class="q-num">9.</span>What is symbolic computation? Give one example.</div><div class="q-item"><span class="q-num">10.</span>What is a high-level programming language?</div><div class="q-item"><span class="q-num">11.</span>What is a low-level programming language?</div><div class="q-item"><span class="q-num">12.</span>How does assembly language differ from a high-level language?</div><div class="q-item"><span class="q-num">13.</span>State two advantages of high-level programming languages.</div><div class="q-item"><span class="q-num">14.</span>What are the three main problem-solving tools introduced in Module 1?</div><div class="q-item"><span class="q-num">15.</span>List the characteristics of a good algorithm.</div><div class="q-item"><span class="q-num">16.</span>What is a flowchart?</div><div class="q-item"><span class="q-num">17.</span>What is a syntax error?</div><div class="q-item"><span class="q-num">18.</span>What is a runtime error?</div><div class="q-item"><span class="q-num">19.</span>What is a semantic error?</div><div class="q-item"><span class="q-num">20.</span>What is experimental debugging?</div><div class="q-item"><span class="q-num">21.</span>What is a value in Python?</div><div class="q-item"><span class="q-num">22.</span>Name three basic Python data types discussed in Module 1.</div><div class="q-item"><span class="q-num">23.</span>What data type is the value 20?</div><div class="q-item"><span class="q-num">24.</span>What data type is the value 20.9?</div><div class="q-item"><span class="q-num">25.</span>What data type is the value "welcome"?</div><div class="q-item"><span class="q-num">26.</span>What is a string?</div><div class="q-item"><span class="q-num">27.</span>What are the three ways of writing strings shown in the notes?</div><div class="q-item"><span class="q-num">28.</span>What is the purpose of triple-quoted strings?</div><div class="q-item"><span class="q-num">29.</span>What does the escape sequence \n do?</div><div class="q-item"><span class="q-num">30.</span>What does the escape sequence \t do?</div><div class="q-item"><span class="q-num">31.</span>What does the escape sequence \\ represent?</div><div class="q-item"><span class="q-num">32.</span>What is a variable?</div><div class="q-item"><span class="q-num">33.</span>Why are meaningful variable names recommended?</div><div class="q-item"><span class="q-num">34.</span>What does assignment using = mean in Python?</div><div class="q-item"><span class="q-num">35.</span>Why is 17 = n invalid?</div><div class="q-item"><span class="q-num">36.</span>What does dynamically typed mean in the context of Python variables?</div><div class="q-item"><span class="q-num">37.</span>What is the difference between mutable and immutable values?</div><div class="q-item"><span class="q-num">38.</span>Name two immutable Python types listed in the notes.</div><div class="q-item"><span class="q-num">39.</span>Name two mutable Python types listed in the notes.</div><div class="q-item"><span class="q-num">40.</span>What is a keyword in Python?</div><div class="q-item"><span class="q-num">41.</span>Why cannot class be used as an ordinary variable name?</div><div class="q-item"><span class="q-num">42.</span>State two rules for naming Python variables.</div><div class="q-item"><span class="q-num">43.</span>What is a statement?</div><div class="q-item"><span class="q-num">44.</span>What is an expression?</div><div class="q-item"><span class="q-num">45.</span>What does evaluating an expression produce?</div><div class="q-item"><span class="q-num">46.</span>What do and, or, and not do?</div><div class="q-item"><span class="q-num">47.</span>What does int() do?</div><div class="q-item"><span class="q-num">48.</span>What does float() do?</div><div class="q-item"><span class="q-num">49.</span>What does str() do?</div><div class="q-item"><span class="q-num">50.</span>Why does input() usually need a type conversion before arithmetic?</div><div class="q-item"><span class="q-num">51.</span>What is composition in programming?</div><div class="q-item"><span class="q-num">52.</span>What does the modulus operator % return?</div><div class="q-item"><span class="q-num">53.</span>Give two uses of the modulus operator.</div><div class="q-item"><span class="q-num">54.</span>How can % be used to check whether an integer is even?</div><div class="q-item"><span class="q-num">55.</span>How can % be used to extract the rightmost digit?</div><div class="q-item"><span class="q-num">56.</span>What is the difference between = and ==?</div><div class="q-item"><span class="q-num">57.</span>How can a variable use its old value to compute a new value?</div><div class="q-item"><span class="q-num">58.</span>What does x += 1 mean?</div><div class="q-item"><span class="q-num">59.</span>What does y -= 1 mean?</div><div class="q-item"><span class="q-num">60.</span>What is iteration?</div><div class="q-item"><span class="q-num">61.</span>When is a for loop especially useful?</div><div class="q-item"><span class="q-num">62.</span>What does a for loop naturally traverse?</div><div class="q-item"><span class="q-num">63.</span>What is range(stop)?</div><div class="q-item"><span class="q-num">64.</span>What is range(start, stop)?</div><div class="q-item"><span class="q-num">65.</span>What is range(start, stop, step)?</div><div class="q-item"><span class="q-num">66.</span>What does range(10, 0, -2) generate?</div><div class="q-item"><span class="q-num">67.</span>Why is the stop value of range() not included?</div><div class="q-item"><span class="q-num">68.</span>What is a while statement used for?</div><div class="q-item"><span class="q-num">69.</span>What is the basic execution cycle of a while loop?</div><div class="q-item"><span class="q-num">70.</span>Why must a while loop update its loop-control variable when necessary?</div><div class="q-item"><span class="q-num">71.</span>What is an infinite loop?</div><div class="q-item"><span class="q-num">72.</span>State one difference between for and while loops.</div><div class="q-item"><span class="q-num">73.</span>What is the Collatz 3n + 1 sequence?</div><div class="q-item"><span class="q-num">74.</span>What happens to n in the Collatz sequence when n is even?</div><div class="q-item"><span class="q-num">75.</span>What happens to n in the Collatz sequence when n is odd?</div><div class="q-item"><span class="q-num">76.</span>When does the Collatz loop in the notes stop?</div><div class="q-item"><span class="q-num">77.</span>For n = 12, what sequence is produced by the Collatz example?</div><div class="q-item"><span class="q-num">78.</span>What are tables useful for when using loops?</div><div class="q-item"><span class="q-num">79.</span>What does the end argument of print() control?</div><div class="q-item"><span class="q-num">80.</span>What is meant by a two-dimensional table in the context of nested iteration?</div><div class="q-item"><span class="q-num">81.</span>What is a nested loop?</div><div class="q-item"><span class="q-num">82.</span>In a star-pattern program, what can the outer loop represent?</div><div class="q-item"><span class="q-num">83.</span>In a star-pattern program, what can the inner loop represent?</div><div class="q-item"><span class="q-num">84.</span>What does break do inside a loop?</div><div class="q-item"><span class="q-num">85.</span>What does continue do inside a loop?</div><div class="q-item"><span class="q-num">86.</span>What is pass used for?</div><div class="q-item"><span class="q-num">87.</span>What is paired data?</div><div class="q-item"><span class="q-num">88.</span>How can tuples be used to group paired information?</div><div class="q-item"><span class="q-num">89.</span>What is nested data?</div><div class="q-item"><span class="q-num">90.</span>How do nested loops process nested data?</div><div class="q-item"><span class="q-num">91.</span>What is a function?</div><div class="q-item"><span class="q-num">92.</span>Why are functions useful in a program?</div><div class="q-item"><span class="q-num">93.</span>What is the syntax for defining a function?</div><div class="q-item"><span class="q-num">94.</span>What is a parameter?</div><div class="q-item"><span class="q-num">95.</span>What is an argument?</div><div class="q-item"><span class="q-num">96.</span>What is the difference between a parameter and an argument?</div><div class="q-item"><span class="q-num">97.</span>What is a return value?</div><div class="q-item"><span class="q-num">98.</span>What is a fruitful function?</div><div class="q-item"><span class="q-num">99.</span>What is a void function in the terminology used in the notes?</div><div class="q-item"><span class="q-num">100.</span>What happens when a function has no return statement?</div></div><div class="quiz-card" id="mcqQuiz">
 <h3>FA1 Individual Quiz — 6 Marks</h3>
-<p>12 questions · 0.5 mark each. Complete the quiz after unlocking the FA1 portal above.</p>
-<p class="assessment-note"><strong>Individual assessment:</strong> Your Name, USN and Section are taken from the FA1 details above. The result is sent to the instructor sheet after submission.</p>
-<div class="quiz-questions">
-<div class="quiz-question"><h4>1. What is a program?</h4><label class="quiz-option"><input name="mcq1" type="radio" value="0"/> <strong>A.</strong> A sequence of instructions to perform a task</label><label class="quiz-option"><input name="mcq1" type="radio" value="1"/> <strong>B.</strong> A collection of only variables</label><label class="quiz-option"><input name="mcq1" type="radio" value="2"/> <strong>C.</strong> A hardware device</label><label class="quiz-option"><input name="mcq1" type="radio" value="3"/> <strong>D.</strong> A Python error message</label></div><div class="quiz-question"><h4>2. Which type of error occurs when Python cannot follow the grammar of the program?</h4><label class="quiz-option"><input name="mcq2" type="radio" value="0"/> <strong>A.</strong> Runtime error</label><label class="quiz-option"><input name="mcq2" type="radio" value="1"/> <strong>B.</strong> Syntax error</label><label class="quiz-option"><input name="mcq2" type="radio" value="2"/> <strong>C.</strong> Semantic error</label><label class="quiz-option"><input name="mcq2" type="radio" value="3"/> <strong>D.</strong> Input error</label></div><div class="quiz-question"><h4>3. Which statement best describes a semantic error?</h4><label class="quiz-option"><input name="mcq3" type="radio" value="0"/> <strong>A.</strong> The program cannot be parsed</label><label class="quiz-option"><input name="mcq3" type="radio" value="1"/> <strong>B.</strong> The program stops because a file is missing</label><label class="quiz-option"><input name="mcq3" type="radio" value="2"/> <strong>C.</strong> The program runs but produces an unintended result</label><label class="quiz-option"><input name="mcq3" type="radio" value="3"/> <strong>D.</strong> The program contains no variables</label></div><div class="quiz-question"><h4>4. What is the value of 3 + 4 * 2?</h4><label class="quiz-option"><input name="mcq4" type="radio" value="0"/> <strong>A.</strong> 14</label><label class="quiz-option"><input name="mcq4" type="radio" value="1"/> <strong>B.</strong> 11</label><label class="quiz-option"><input name="mcq4" type="radio" value="2"/> <strong>C.</strong> 10</label><label class="quiz-option"><input name="mcq4" type="radio" value="3"/> <strong>D.</strong> 9</label></div><div class="quiz-question"><h4>5. Which is a valid Python variable name?</h4><label class="quiz-option"><input name="mcq5" type="radio" value="0"/> <strong>A.</strong> 2marks</label><label class="quiz-option"><input name="mcq5" type="radio" value="1"/> <strong>B.</strong> student marks</label><label class="quiz-option"><input name="mcq5" type="radio" value="2"/> <strong>C.</strong> class</label><label class="quiz-option"><input name="mcq5" type="radio" value="3"/> <strong>D.</strong> student_marks</label></div><div class="quiz-question"><h4>6. What does int(&quot;25&quot;) produce?</h4><label class="quiz-option"><input name="mcq6" type="radio" value="0"/> <strong>A.</strong> The string 25</label><label class="quiz-option"><input name="mcq6" type="radio" value="1"/> <strong>B.</strong> The integer 25</label><label class="quiz-option"><input name="mcq6" type="radio" value="2"/> <strong>C.</strong> The float 25.0</label><label class="quiz-option"><input name="mcq6" type="radio" value="3"/> <strong>D.</strong> A Boolean value</label></div><div class="quiz-question"><h4>7. What is the result of 17 % 5?</h4><label class="quiz-option"><input name="mcq7" type="radio" value="0"/> <strong>A.</strong> 2</label><label class="quiz-option"><input name="mcq7" type="radio" value="1"/> <strong>B.</strong> 3</label><label class="quiz-option"><input name="mcq7" type="radio" value="2"/> <strong>C.</strong> 5</label><label class="quiz-option"><input name="mcq7" type="radio" value="3"/> <strong>D.</strong> 12</label></div><div class="quiz-question"><h4>8. What values are produced by range(2, 6)?</h4><label class="quiz-option"><input name="mcq8" type="radio" value="0"/> <strong>A.</strong> 2, 3, 4, 5</label><label class="quiz-option"><input name="mcq8" type="radio" value="1"/> <strong>B.</strong> 2, 3, 4, 5, 6</label><label class="quiz-option"><input name="mcq8" type="radio" value="2"/> <strong>C.</strong> 1, 2, 3, 4, 5</label><label class="quiz-option"><input name="mcq8" type="radio" value="3"/> <strong>D.</strong> 3, 4, 5, 6</label></div><div class="quiz-question"><h4>9. What is the main purpose of updating the control variable in a while loop?</h4><label class="quiz-option"><input name="mcq9" type="radio" value="0"/> <strong>A.</strong> To make the loop eventually reach its stopping condition</label><label class="quiz-option"><input name="mcq9" type="radio" value="1"/> <strong>B.</strong> To convert a string into an integer</label><label class="quiz-option"><input name="mcq9" type="radio" value="2"/> <strong>C.</strong> To define a function</label><label class="quiz-option"><input name="mcq9" type="radio" value="3"/> <strong>D.</strong> To create a nested list</label></div><div class="quiz-question"><h4>10. What does break do when executed inside a loop?</h4><label class="quiz-option"><input name="mcq10" type="radio" value="0"/> <strong>A.</strong> Skips the current iteration and continues the loop</label><label class="quiz-option"><input name="mcq10" type="radio" value="1"/> <strong>B.</strong> Exits the loop immediately</label><label class="quiz-option"><input name="mcq10" type="radio" value="2"/> <strong>C.</strong> Restarts the loop from the beginning</label><label class="quiz-option"><input name="mcq10" type="radio" value="3"/> <strong>D.</strong> Returns a value from a function</label></div><div class="quiz-question"><h4>11. In the Collatz 3n + 1 sequence, what operation is applied when n is even?</h4><label class="quiz-option"><input name="mcq11" type="radio" value="0"/> <strong>A.</strong> n = 3n + 1</label><label class="quiz-option"><input name="mcq11" type="radio" value="1"/> <strong>B.</strong> n = n // 2</label><label class="quiz-option"><input name="mcq11" type="radio" value="2"/> <strong>C.</strong> n = n * 2</label><label class="quiz-option"><input name="mcq11" type="radio" value="3"/> <strong>D.</strong> n = n - 1</label></div><div class="quiz-question"><h4>12. Which statement correctly describes a function with arguments and a return value?</h4><label class="quiz-option"><input name="mcq12" type="radio" value="0"/> <strong>A.</strong> It can receive input values and send a result back to the caller</label><label class="quiz-option"><input name="mcq12" type="radio" value="1"/> <strong>B.</strong> It can only print output and cannot receive values</label><label class="quiz-option"><input name="mcq12" type="radio" value="2"/> <strong>C.</strong> It must always contain a while loop</label><label class="quiz-option"><input name="mcq12" type="radio" value="3"/> <strong>D.</strong> It cannot be reused in another part of a program</label></div>
+<p><strong>Secure online assessment:</strong> 12 questions · 0.5 mark each · maximum 6 marks · one attempt per USN.</p>
+<div class="assessment-note">
+<strong>How it works:</strong> The quiz opens on Google Apps Script. The questions and answer key are not stored on this GitHub page.
+Your Name, USN and Section are verified by the backend, and the final score is recorded in the instructor's Google Sheet.
 </div>
-<div class="quiz-actions"><button type="button" class="quiz-btn" id="submitQuizBtn" onclick="submitQuiz()">Submit Quiz</button><button type="button" class="quiz-btn quiz-reset" onclick="resetQuiz()">Reset</button></div>
-<div class="quiz-result" id="quizResult"></div>
+<div class="secure-quiz-grid">
+<div class="secure-quiz-item"><strong>🔐 Server-side questions</strong><span>Questions and correct answers stay in Apps Script.</span></div>
+<div class="secure-quiz-item"><strong>👤 Student verification</strong><span>Only approved Section M/N students can submit.</span></div>
+<div class="secure-quiz-item"><strong>1️⃣ One attempt</strong><span>A second submission for the same USN is blocked.</span></div>
+<div class="secure-quiz-item"><strong>📊 6 marks</strong><span>12 questions are converted to a maximum of 6 marks.</span></div>
+</div>
+<button type="button" class="quiz-btn" onclick="openSecureQuiz()">🔐 Open Secure FA1 Quiz</button>
+<p class="quiz-mini">Quiz window: 9 October 2026 · 9:00 AM–11:00 AM IST</p>
 </div></section>
 
 <footer><strong>Kiran Mudaraddi · Python Programming · Module 1</strong><br/>Interactive course notes for classroom learning, self-study and lab preparation.</footer>
@@ -730,14 +736,13 @@ if(localStorage.getItem('pyTheme')==='dark')document.body.classList.add('dark');
 window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop)/(h.scrollHeight-h.clientHeight)*100)+'%';});
 function copyCode(btn){const code=btn.closest('.code-card').querySelector('code').innerText;navigator.clipboard.writeText(code).then(()=>{btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy',1000)})}
 
-const quizAnswers=[0, 1, 2, 1, 3, 1, 0, 0, 0, 1, 1, 0];
-// Google Apps Script Web App endpoint. Replace with your FA1 backend URL after deployment.
-const FA1_BACKEND_URL='https://script.google.com/macros/s/AKfycbxiSM412CRmhKoI1oflYUBPZtt6-oomp4pr-SLnLVT7pigLH9Wcs4bpR0llM5nLmCZp/exec';
-const ALLOWED_USNS = {
-  M: new Set(["22BI26CS127","22BI26CS010","22BI26CS151","22BI26CS219","22BI26CS088","22BI26CS202","22BI26CS188","22BI26CS143","22BI26CS059","22BI26CS101","22BI26CS189","22BI26CS074","22BI26CS121","22BI26CS017","22BI26CS135","22BI26CS114","22BI26CS073","22BI26CS158","22BI26CS182","22BI26CS045","22BI26CS174","22BI26CS145","22BI26CS104","22BI26CS118","22BI26CS076","22BI26CS069","22BI26CS004","22BI26CS132","22BI26CS044","22BI26CS161","22BI26CS077","22BI26CS172","22BI26CS023","22BI26CS152","22BI26CS224","22BI26CS046","22BI26CS022","22BI26CS117","22BI26CS107","22BI26CS030","22BI26CS025","22BI26CS003","22BI26CS109","22BI26CS036","22BI26CS084","22BI26CS203","22BI26CS230","22BI26CS015","22BI26CS153","22BI26CS095","22BI26CS051","22BI26CS204","22BI26CS041","22BI26CS062","22BI26CS231","22BI26CS037","22BI26CS071","22BI26CS160","22BI26CS169","22BI26CS194"]),
-  N: new Set(["22BI26CS019","22BI26CS089","22BI26CS184","22BI26CS142","22BI26CS054","22BI26CS148","22BI26CS070","22BI26CS216","22BI26CS140","22BI26CS009","22BI26CS092","22BI26CS154","22BI26CS173","22BI26CS195","22BI26CS078","22BI26CS108","22BI26CS120","22BI26CS064","22BI26CS133","22BI26CS178","22BI26CS096","22BI26CS205","22BI26CS079","22BI26CS166","22BI26CS131","22BI26CS130","22BI26CS159","22BI26CS125","22BI26CS201","22BI26CS228","22BI26CS002","22BI26CS212","22BI26CS093","22BI26CS049","22BI26CS179","22BI26CS180","22BI26CS137","22BI26CS213","22BI26CS232","22BI26CS211"])
-};
+// FA1 secure backend configuration
+const FA1_BACKEND_URL='https://script.google.com/macros/s/AKfycbyM5Gg2CVRP8iG0QnLJsehwrLhfdc4xMbfsm5-lSjIyaNaMt3BAbPYIPtyL63jo4XS/exec';
+const FA1_QUIZ_URL='https://script.google.com/macros/s/AKfycbyM5Gg2CVRP8iG0QnLJsehwrLhfdc4xMbfsm5-lSjIyaNaMt3BAbPYIPtyL63jo4XS/exec?page=quiz';
 const MAX_PROJECT_BYTES=10*1024*1024;
+const MAX_PRESENTATION_BYTES=15*1024*1024;
+
+
 const MAX_PRESENTATION_BYTES=15*1024*1024;
 
 function getStudentDetails(){
@@ -751,31 +756,39 @@ function isFA1Unlocked(showMessage=true){
   const student=getStudentDetails();
   const box=document.getElementById('accessMessage');
   const lock=document.getElementById('fa1Lock');
-  const sectionEligible = student.section==='M'||student.section==='N';
-  const rosterEligible = sectionEligible && ALLOWED_USNS[student.section].has(student.usn);
-  const valid=!!student.name && !!student.usn && rosterEligible;
+  const eligible=student.section==='M'||student.section==='N';
+  const valid=!!student.name && !!student.usn && eligible;
+
   if(valid){
-    box.innerHTML='✅ <strong>FA1 unlocked.</strong> You are in Section '+student.section+'. You can submit the Word/PPT files and take the individual 6-mark quiz.';
+    box.innerHTML='✅ <strong>FA1 unlocked.</strong> Section '+student.section+' selected. Final USN verification is performed by the secure backend.';
     box.style.background='#eef7f1';box.style.borderColor='#b7dfc8';box.style.color='#26724b';
     if(lock) lock.textContent='🔓 Section '+student.section+' Unlocked';
   }else{
-    if(student.section && sectionEligible && student.usn && !ALLOWED_USNS[student.section].has(student.usn)){
-      box.innerHTML='⛔ <strong>Access denied.</strong> This USN is not in the approved Section '+student.section+' FA1 roster.';
-    }else{
-      box.innerHTML='Enter your Name, USN and select <strong>M</strong> or <strong>N</strong> to unlock FA1. Other sections are not eligible.';
-    }
+    box.innerHTML='Enter your Name, USN and select <strong>M</strong> or <strong>N</strong> to unlock FA1. Final student verification is performed by the secure backend.';
     box.style.background='';box.style.borderColor='';box.style.color='';
     if(lock) lock.textContent='🔒 M & N Sections Only';
   }
+
   document.querySelectorAll('.fa1-upload-btn').forEach(btn=>{
     if(btn.id==='projectUploadBtn'||btn.id==='presentationUploadBtn') btn.disabled=!valid;
   });
+
   if(showMessage && !valid && student.section && student.section!=='M' && student.section!=='N'){
     box.innerHTML='⛔ <strong>Access denied.</strong> FA1 submission is available only to Section M and Section N students.';
     box.scrollIntoView({behavior:'smooth',block:'nearest'});
   }
   return valid;
 }
+
+function openSecureQuiz(){
+  const student=getStudentDetails();
+  if(!student.name || !student.usn || !(student.section==='M'||student.section==='N')){
+    isFA1Unlocked(true);
+    return;
+  }
+  window.open(FA1_QUIZ_URL,'_blank','noopener,noreferrer');
+}
+
 function setupFA1Access(){
   ['studentName','studentUSN','studentSection'].forEach(id=>{
     const el=document.getElementById(id); if(el){el.addEventListener('input',()=>isFA1Unlocked(false));el.addEventListener('change',()=>isFA1Unlocked(false));}
@@ -816,50 +829,9 @@ async function uploadFA1File(kind){
   finally{isFA1Unlocked(false);}
 }
 
-async function submitQuiz(){
-  if(!isFA1Unlocked(true)) return;
-  const student=getStudentDetails();
-  const box=document.getElementById('quizResult');
-  let correct=0,answered=0;
-  quizAnswers.forEach((a,i)=>{
-    const pick=document.querySelector('input[name="mcq'+(i+1)+'"]:checked');
-    if(pick){answered++;if(Number(pick.value)===a)correct++;}
-  });
-  const totalQuestions=12;
-  const score=correct*0.5;
-  if(answered<totalQuestions){
-    box.style.display='block';
-    box.innerHTML='<strong>Please answer all 12 questions.</strong><br>'+answered+' of 12 questions answered.';
-    box.scrollIntoView({behavior:'smooth',block:'nearest'});
-    return;
-  }
-  const percentage=Math.round((score/6)*100);
-  const payload={action:'quiz',assessment:'FA1',studentName:student.name,usn:student.usn,section:student.section,score:score,total:6,percentage:percentage,submittedAt:new Date().toISOString(),module:'Python Programming — Module 1'};
-  const btn=document.getElementById('submitQuizBtn');
-  btn.disabled=true;
-  btn.textContent='Submitting…';
-  box.style.display='block';
-  box.innerHTML='<strong>Score: '+score+'/6 ('+percentage+'%)</strong><br>Submitting your individual result…';
-  try{
-    if(FA1_BACKEND_URL && !FA1_BACKEND_URL.includes('PASTE_FA1_')){
-      await fetch(FA1_BACKEND_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
-      box.innerHTML='<strong>Quiz submitted successfully.</strong><br>'+student.name+' · '+student.usn+' · Section '+student.section+'<br><strong>FA1 Quiz: '+score+'/6 marks</strong><br>Your result has been sent to the instructor sheet.';
-    }else{
-      box.innerHTML='<strong>FA1 Quiz: '+score+'/6 marks</strong><br>'+student.name+' · '+student.usn+' · Section '+student.section+'<br><span style="font-size:.9em">Scoring is working. Add the Google Apps Script backend URL to record the result.</span>';
-    }
-  }catch(err){
-    box.innerHTML='<strong>FA1 Quiz: '+score+'/6 marks</strong><br>Quiz completed, but the submission connection could not be reached.';
-  }finally{
-    btn.disabled=false;
-    btn.textContent='Submit Quiz';
-    box.scrollIntoView({behavior:'smooth',block:'nearest'});
-  }
-}
+async 
 
-function resetQuiz(){
-  document.querySelectorAll('#mcqQuiz input[type="radio"]').forEach(x=>x.checked=false);
-  const box=document.getElementById('quizResult');box.style.display='none';box.innerHTML='';
-}
+
 
 function toggleMobileMenu(){
   const open=document.body.classList.toggle('menu-open');
